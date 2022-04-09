@@ -1,34 +1,23 @@
 <template>
     <span>
-   
-        <v-toolbar app color="#456769" dark>
-            <v-toolbar-side-icon
-                class="hidden-md-and-up"
-                @click="drawer = !drawer"
-            ></v-toolbar-side-icon>
+        <v-app-bar fixed color="#456769" dark>
             <v-spacer class="hidden-md-and-up"></v-spacer>
             <router-link to="/">
-                <v-toolbar-title dark>Lubu School</v-toolbar-title>
+                <span  class="title">Lubu School</span>
             </router-link>
             <v-btn
-                flat
-                class="hidden-sm-and-down nav-menu"
+                depressed
+                dark
+                outlined
+                tile
+                class="hidden-sm-and-down ml-12 nav-menu"
                 to="/menu"
                 data-cy="menuBtn"
-                >Menu</v-btn
+                >Curses</v-btn
             >
             <v-spacer class="hidden-sm-and-down"></v-spacer>
-            <div v-if="!isAuthenticated" class="hidden-sm-and-down">
-                <v-btn flat to="/sign-in" data-cy="signinBtn">SIGN IN</v-btn>
-                
-            </div>
-            <div v-else>
-                <v-btn flat to="/about">PROFILE</v-btn>
-                <v-btn outline color="white" @click="logout" data-cy="logout"
-                    >Logout</v-btn
-                >
-            </div>
-        </v-toolbar>
+                <v-btn  to="/sign-in" tile depressed light data-cy="signinBtn">SIGN IN</v-btn>
+        </v-app-bar>
     </span>
 </template>
 
@@ -42,20 +31,20 @@ export default {
                 { title: 'Menu', url: '/menu' },
                 { title: 'Profile', url: '/about' },
                 { title: 'Sign In', url: '/sign-in' },
-                { title: 'Join', url: '/join' }
-            ]
+                { title: 'Join', url: '/join' },
+            ],
         };
     },
     computed: {
         isAuthenticated() {
             return this.$store.getters.isAuthenticated;
-        }
+        },
     },
     methods: {
         logout() {
             this.$store.dispatch('userSignOut');
-        }
-    }
+        },
+    },
 };
 </script>
 

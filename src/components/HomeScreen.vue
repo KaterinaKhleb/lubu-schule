@@ -9,10 +9,13 @@
             >
                 FOR EVERYONE
             </div>
+            <div class="d-flex"><v-icon color="white">mdi-map-marker</v-icon>
+            <span  class="white--text">Ludwigsburg</span></div>
+            
             <div class="display-1 font-weight-bold white--text text-xs-center">
                 We are there for you
             </div>
-            <v-btn fab class="mt-5 brown darken-4">
+            <v-btn to="/about" fab  class="mt-5 darken-4">
                 <v-icon large color="white">expand_more</v-icon>
             </v-btn>
         </v-layout>
@@ -21,13 +24,13 @@
 
 <script>
 export default {
-    name: 'HomeScreen'
+    name: 'HomeScreen',
 };
 </script>
 
 <style scoped>
 .home-hero {
-    background: url("../assets/drawers.jpeg") ;
+    background: url('../assets/drawers.jpeg');
     background-size: cover;
     width: 100%;
     height: 100%;
