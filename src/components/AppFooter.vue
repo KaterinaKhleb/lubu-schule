@@ -1,6 +1,6 @@
 <template>
     <v-footer dark padless>
-        <v-card style="width:100%" color="#c36f2d" flat tile>
+        <v-card style="width:100%" color="#456769" flat tile>
             <v-card-title >
                 <strong class="subheading"
                     >Get connected with us on social networks!</strong
