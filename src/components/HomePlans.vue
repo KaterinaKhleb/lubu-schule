@@ -8,7 +8,7 @@
         <v-layout row wrap class="meal-plans">
             <v-expansion-panels focusable popup>
                 <v-expansion-panel v-for="(item, i) in 5" :key="i">
-                    <v-expansion-panel-header light color="#a7a59f">
+                    <v-expansion-panel-header light >
                         Curse blabla
                     </v-expansion-panel-header>
                     <v-expansion-panel-content color="#d9d8d4">
@@ -27,7 +27,6 @@
                             </div>
                             <div>
                                 <span>When?</span>
-
                             </div>
                         </div>
                     </v-expansion-panel-content>
@@ -40,11 +39,7 @@
 <script>
 export default {
     name: 'HomePlans',
-    methods: {
-        showRecipes(plan) {
-            this.$store.dispatch('getRecipes', plan);
-        },
-    },
+    methods: {},
 };
 </script>
 
