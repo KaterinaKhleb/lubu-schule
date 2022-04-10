@@ -16,7 +16,7 @@
                 >Curses</v-btn
             >
             <v-spacer class="hidden-sm-and-down"></v-spacer>
-            <v-btn @click="scrollMeTo('registerForm')" tile depressed light data-cy="signinBtn"
+            <v-btn @click="scrollMeTo('registerForm')" tile depressed light
                 >SIGN UP</v-btn
             >
         </v-app-bar>
@@ -37,15 +37,7 @@ export default {
             ]
         };
     },
-    computed: {
-        isAuthenticated() {
-            return this.$store.getters.isAuthenticated;
-        }
-    },
     methods: {
-        logout() {
-            this.$store.dispatch('userSignOut');
-        },
         scrollMeTo(refName) {
             const element = document.getElementById(refName)
             const top = element.offsetTop;

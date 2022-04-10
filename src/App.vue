@@ -12,6 +12,7 @@
 <script>
 import AppNavigation from '@/components/AppNavigation';
 import AppFooter from '@/components/AppFooter';
+import {mapActions, mapGetters} from "vuex";
 
 export default {
     name: 'App',
@@ -19,9 +20,22 @@ export default {
         AppNavigation,
         AppFooter,
     },
+
     data: () => ({
         icons: ['mdi-facebook', 'mdi-twitter', 'mdi-linkedin', 'mdi-instagram'],
     }),
+
+    computed: {
+        ...mapGetters([])
+    },
+
+    methods: {
+      ...mapActions(["getContent"])  
+    },
+
+    mounted: function () {
+        this.getContent('de')
+}
 };
 </script>
 
