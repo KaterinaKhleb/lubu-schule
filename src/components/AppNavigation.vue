@@ -3,7 +3,7 @@
         <v-app-bar fixed color="#456769" dark>
             <v-spacer class="hidden-md-and-up"></v-spacer>
             <router-link to="/">
-                <span  class="title">Lubu School</span>
+                <span class="title">Lubu School</span>
             </router-link>
             <v-btn
                 depressed
@@ -11,12 +11,14 @@
                 outlined
                 tile
                 class="hidden-sm-and-down ml-12 nav-menu"
-                to="/menu"
+                @click="scrollMeTo('curseSection')"
                 data-cy="menuBtn"
                 >Curses</v-btn
             >
             <v-spacer class="hidden-sm-and-down"></v-spacer>
-                <v-btn  to="/sign-in" tile depressed light data-cy="signinBtn">SIGN IN</v-btn>
+            <v-btn @click="scrollMeTo('registerForm')" tile depressed light data-cy="signinBtn"
+                >SIGN UP</v-btn
+            >
         </v-app-bar>
     </span>
 </template>
@@ -31,20 +33,25 @@ export default {
                 { title: 'Menu', url: '/menu' },
                 { title: 'Profile', url: '/about' },
                 { title: 'Sign In', url: '/sign-in' },
-                { title: 'Join', url: '/join' },
-            ],
+                { title: 'Join', url: '/join' }
+            ]
         };
     },
     computed: {
         isAuthenticated() {
             return this.$store.getters.isAuthenticated;
-        },
+        }
     },
     methods: {
         logout() {
             this.$store.dispatch('userSignOut');
         },
-    },
+        scrollMeTo(refName) {
+            const element = document.getElementById(refName)
+            const top = element.offsetTop;
+            window.scrollTo(0, top);
+        }
+    }
 };
 </script>
 

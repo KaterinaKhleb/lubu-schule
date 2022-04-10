@@ -2,7 +2,7 @@
     <span>
         <home-screen></home-screen>
         <home-details></home-details>
-        <home-plans></home-plans>
+        <curses-plan></curses-plan>
         <formular></formular>
     </span>
 </template>
@@ -10,7 +10,7 @@
 <script>
 import HomeScreen from '@/components/HomeScreen';
 import HomeDetails from '@/components/HomeDetails';
-import HomePlans from '@/components/HomePlans';
+import CursesPlan from '@/components/CursesPlan';
 import Formular from '@/components/Formular';
 
 export default {
@@ -18,7 +18,7 @@ export default {
     components: {
         HomeScreen,
         HomeDetails,
-        HomePlans,
+        CursesPlan,
         Formular,
     },
 };

@@ -1,19 +1,16 @@
 <template>
     <div>
-        <home-plans></home-plans>
-        <meal-recipes></meal-recipes>
+        <curses-plan></curses-plan>
     </div>
 </template>
 
 <script>
-import HomePlans from '@/components/HomePlans';
-import MealRecipes from '@/components/MealRecipes';
+import CursesPlan from '@/components/CursesPlan';
 
 export default {
     name: 'Menu',
     components: {
-        HomePlans,
-        MealRecipes
+        CursesPlan,
     }
 };
 </script>

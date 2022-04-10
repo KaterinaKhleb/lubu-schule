@@ -1,5 +1,5 @@
 <template>
-    <v-container grid-list-lg>
+    <v-container id="curseSection" grid-list-lg>
         <v-layout row>
             <v-flex class="display-2  black--text text-xs-center my-5"
                 >Available free courses</v-flex
@@ -45,7 +45,7 @@
 
 <script>
 export default {
-    name: 'HomePlans',
+    name: 'CursesPlan',
     methods: {},
 };
 </script>
