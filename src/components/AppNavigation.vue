@@ -1,6 +1,10 @@
 <template>
     <span>
-        <v-app-bar fixed color="#456769" dark>
+        <v-app-bar
+            fixed
+            color="#456769"
+            dark
+        >
             <v-spacer class="hidden-md-and-up"></v-spacer>
             <router-link to="/">
                 <span class="title">Lubu School</span>
@@ -11,15 +15,30 @@
                 outlined
                 tile
                 class="hidden-sm-and-down ml-12 nav-menu"
-                @click="scrollMeTo('curseSection')"
+                to="/"
                 data-cy="menuBtn"
-                >Curses</v-btn
-            >
-            <v-spacer class="hidden-sm-and-down"></v-spacer>
-            <v-btn @click="scrollMeTo('registerForm')" tile depressed light
-                >SIGN UP</v-btn
-            >
-        </v-app-bar>
+            >Curses</v-btn>
+                <v-btn
+                    depressed
+                    dark
+                    outlined
+                    tile
+                    class="hidden-sm-and-down ml-12 nav-menu"
+                    to="/sommercamp"
+                    data-cy="menuBtn"
+                >Summer Camp</v-btn>
+                    <v-spacer class="hidden-sm-and-down"></v-spacer>
+                    <v-col cols="1">
+                        <v-select
+                            v-model="selectedLanguage"
+                            :items="langs"
+                            append-outer-icon="mdi-earth"
+                            menu-props="auto"
+                            hide-details
+                        ></v-select>
+                    </v-col>
+
+                        </v-app-bar>
     </span>
 </template>
 
@@ -29,21 +48,17 @@ export default {
     data() {
         return {
             drawer: false,
-            items: [
-                { title: 'Menu', url: '/menu' },
-                { title: 'Profile', url: '/about' },
-                { title: 'Sign In', url: '/sign-in' },
-                { title: 'Join', url: '/join' }
-            ]
+            selectedLanguage: 'en',
+            langs: ['en', 'ukr', 'ru', 'de'],
         };
     },
     methods: {
         scrollMeTo(refName) {
-            const element = document.getElementById(refName)
+            const element = document.getElementById(refName);
             const top = element.offsetTop;
             window.scrollTo(0, top);
-        }
-    }
+        },
+    },
 };
 </script>
 
@@ -51,5 +66,8 @@ export default {
 a {
     color: white;
     text-decoration: none;
+}
+.title {
+    color: white;
 }
 </style>
