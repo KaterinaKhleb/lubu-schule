@@ -52,13 +52,7 @@ export default {
             langs: ['en', 'ukr', 'ru', 'de'],
         };
     },
-    methods: {
-        scrollMeTo(refName) {
-            const element = document.getElementById(refName);
-            const top = element.offsetTop;
-            window.scrollTo(0, top);
-        },
-    },
+  
 };
 </script>
 

@@ -35,7 +35,7 @@
 
                             </div>
                         </div>
-                        <v-btn class="my-7 ml-3" color="#c36f2d" light outlined tile depressed>Register</v-btn>
+                        <v-btn class="my-7 ml-3"  @click="scrollMeTo('registerForm')" color="#c36f2d" light outlined tile depressed>Register</v-btn>
                     </v-expansion-panel-content>
                 </v-expansion-panel>
             </v-expansion-panels>
@@ -46,7 +46,13 @@
 <script>
 export default {
     name: 'CursesPlan',
-    methods: {},
+      methods: {
+        scrollMeTo(refName) {
+            const element = document.getElementById(refName);
+            const top = element.offsetTop;
+            window.scrollTo(0, top);
+        },
+    },
 };
 </script>
 

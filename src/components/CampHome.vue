@@ -26,6 +26,7 @@ export default {
     background: url('../assets/aschenhuette.jpg');
     background-size: cover;
     width: 100vw;
+      filter: grayscale(50%);
     height: 100vh;
 }
 </style>

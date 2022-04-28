@@ -6,77 +6,55 @@
                 sm="6"
                 md="8"
             >
-                <v-card
-                    class="pa-2"
-                    outlined
-                    tile
-                >
-                    <div class="mt-4">
-                        <span class="text-h2 font-weight-bold ">Sommercamp - <br> Vacation in Schwarzwald!</span>
+                <v-card tile  flat style="height:100%">
+                    <div class="pt-4">
+                        <span class="text-h2 font-weight-bold ">Summer camp - <br> Vacation in Schwarzwald!</span>
                     </div>
 
                     <v-container class="mt-3">
-                        <span class="text-h5">Description Description Description Description Description
-                             Description Description Description Description Description Description
-                              Description Description Description Description Description Description Description
-                               Description Description Description Description Description Description
-                                Description Description Description Description Description Description
-                                 Description Description Description Description Description
+                        <span class="text-h5">Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description Description
 
                         </span>
+                     
+                        <v-footer  class="footer d-flex align-end mx-auto" padless>
+                        <v-divider></v-divider>
+                            <v-col
+                                class="text-center"
+                                cols="12"
+                            >
+                                <div>
+                                        
+                                    <strong>Booking: </strong> +35826352487
+                                </div>
+                                </v-col>
+                        </v-footer>
+
                     </v-container>
 
-                    </v-card>
-                    </v-col>
-                    <v-col
-                        cols="6"
-                        md="4"
+                </v-card>
+                </v-col>
+                <v-col
+                    cols="6"
+                    md="4"
+                >
+                    <v-card
+                        class="pa-2"
+                        outlined
+                        tile
                     >
-                        <v-card
-                            class="pa-2"
-                            outlined
-                            tile
+                        <div
+                            v-for="item in descItems"
+                            :key="item.name"
+                            class="d-flex flex-column"
                         >
-                            <div class="d-flex flex-column">
-                                <span class="text-h5 curse-underline ma-6">WHERE</span>
-                                <span class="mx-3">
-                                    <v-icon
-                                        class="mr-2"
-                                        color="black"
-                                    >mdi-map-marker</v-icon>Aschenhütte, Bad Herrenalb</span>
+                            <span class="text-h5 curse-underline mx-6 mt-5 mb-2">{{item.name}}</span>
+                            <span class="mx-3">
+                                <v-icon
+                                    class="mr-2"
+                                    color="black"
+                                >{{item.icon}}</v-icon>{{item.text}}</span>
                             </div>
-                            <div class="d-flex flex-column">
-                                <span class="text-h5 curse-underline ma-6 ">WHEN</span>
-                                <span class="mx-3">
-                                    <v-icon
-                                        class="mr-2"
-                                        color="black"
-                                    >mdi-clock-outline</v-icon>21-27.8.2022</span>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <span class="text-h5 curse-underline ma-6 "> AGE</span>
-                                <span class="mx-3">
-                                    <v-icon
-                                        class="mr-2"
-                                        color="black"
-                                    >mdi-human-greeting-variant</v-icon>8-13 y.o.</span>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <span class="text-h5 curse-underline ma-6">LANGUAGE</span>
-                                <span class="mx-3">
-                                    <v-icon
-                                        class="mr-2"
-                                        color="black"
-                                    >mdi-ab-testing</v-icon>English, Russian, Ukranian, German</span>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <span class="text-h5 curse-underline ma-6">PRICE</span>
-                                <span class="mx-3">
-                                    <v-icon
-                                        class="mr-2"
-                                        color="black"
-                                    >mdi-cash</v-icon>300 Euro</span>
-                            </div>
+
                             </v-card>
                             </v-col>
         </v-row>
@@ -87,10 +65,37 @@
 <script>
 export default {
     name: 'CampDescription',
-    methods: {
-        showRecipes(plan) {
-            this.$store.dispatch('getRecipes', plan);
-        },
+    data() {
+        return {
+            descItems: [
+                {
+                    name: 'WHERE',
+                    text: 'Aschenhütte, Bad Herrenalb',
+                    icon: 'mdi-map-marker',
+                },
+                {
+                    name: 'WHEN',
+                    text: '21-27.8.2022 ',
+                    icon: 'mdi-clock-outline',
+                },
+
+                {
+                    name: 'AGE GROUP',
+                    text: '8-13 ',
+                    icon: 'mdi-hiking',
+                },
+                {
+                    name: 'WE SPEAK',
+                    text: 'English, German, Riussian ',
+                    icon: 'mdi-ab-testing',
+                },
+                {
+                    name: 'PRICE',
+                    text: '300 Euro  ',
+                    icon: 'mdi-cash',
+                },
+            ],
+        };
     },
 };
 </script>
@@ -102,12 +107,17 @@ export default {
     bottom: 16px;
     width: 150px;
     height: 14px;
-    transform: skew(-12deg) translateY(90%);
-    background: rgba(238, 111, 87, 0.5);
+    transform: skew(-12deg) translateY(70%);
+    background: rgba(69, 103, 105, 0.5);
     /* z-index: -1; */
 }
 .curse-underline {
     padding: 30px 0 8px;
     position: relative;
 }
+.footer{
+    position: absolute;
+    bottom:24px;
+    width: 96%}
+
 </style>
