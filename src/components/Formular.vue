@@ -6,82 +6,94 @@
         grid-list-lg
     >
         <v-container grid-list-lg>
-            <v-layout column>
-                <v-flex class="display-2  black--text text-xs-center my-5">{{title}}</v-flex>
-                <v-form
-                    style="background:white"
-                    ref="form"
-                    class="pa-7"
-                    v-model="valid"
-                    lazy-validation
-                >
-                    <v-text-field
-                        color="teal"
-                        v-model="name"
-                        :rules="nameRules"
-                        label="Name"
-                        required
-                    ></v-text-field>
+            <v-flex class="display-2  black--text text-xs-center my-5">{{title}}</v-flex>
 
+            <div class="d-flex width-80">
+                <div class="width-50 ">
+                    Call us
+                </div>
+                <div class="width-50">
+
+                    <v-form
+                        style="background:white"
+                        ref="form"
+                        class="pa-7"
+                        v-model="valid"
+                        lazy-validation
+                    >
                         <v-text-field
                             color="teal"
-                            v-model="email"
-                            :rules="emailRules"
-                            label="E-mail"
+                            v-model="name"
+                            :rules="nameRules"
+                            label="Name"
                             required
                         ></v-text-field>
 
                             <v-text-field
                                 color="teal"
-                                v-model="phone"
-                                :rules="phoneRules"
-                                label="Phone number"
+                                v-model="email"
+                                :rules="emailRules"
+                                label="E-mail"
                                 required
                             ></v-text-field>
 
-                                <v-select
-                                v-if="formType==='curses'"
+                                <v-text-field
                                     color="teal"
-                                    v-model="select"
-                                    :items="items"
-                                    :rules="[v => !!v || 'Item is required']"
-                                    label="Item"
+                                    v-model="phone"
+                                    :rules="phoneRules"
+                                    label="Phone number"
                                     required
-                                ></v-select>
+                                ></v-text-field>
 
-                                    <v-textarea
-                                        v-model="message"
+                                    <v-select
+                                        v-if="formType==='curses'"
                                         color="teal"
-                                    >
-                                        <template v-slot:label>
-                                            <div>
-                                                Message
-                                                <small>(optional)</small>
-                                            </div>
-                                        </template>
-                                        </v-textarea>
+                                        v-model="select"
+                                        :items="items"
+                                        :rules="[v => !!v || 'Item is required']"
+                                        label="Item"
+                                        required
+                                    ></v-select>
 
-                                        <v-checkbox
-                                            v-model="checkbox"
-                                            :rules="[v => !!v || 'You must agree to continue!']"
-                                            label="Do you agree?"
-                                            required
-                                        ></v-checkbox>
+                                        <v-textarea
+                                            v-model="message"
+                                            color="teal"
+                                        >
+                                            <template v-slot:label>
+                                                <div>
+                                                    Message
+                                                    <small>(optional)</small>
+                                                </div>
+                                            </template>
+                                            </v-textarea>
 
-                                            <v-btn
-                                                :disabled="!valid"
-                                                color="success"
-                                                class="mr-4"
-                                                @click="validate"
-                                            >
-                                                Send
-                                                </v-btn>
-                                                </v-form>
-            </v-layout>
+                                            <v-checkbox
+                                                v-model="checkbox"
+                                                :rules="[v => !!v || 'You must agree to continue!']"
+                                                label="Do you agree?"
+                                                required
+                                            ></v-checkbox>
+
+                                                <v-btn
+                                                    :disabled="!valid"
+                                                    color="success"
+                                                    class="mr-4"
+                                                    @click="validate"
+                                                >
+                                                    Send
+                                                    </v-btn>
+                                                    </v-form>
+
+                </div>
+
+            </div>
         </v-container>
 
-        <div class="text-h4 text-center my-4" color="white">Or give us a call</div>
-        </v-container>
+        <div
+            class="text-h4 text-center my-4"
+            color="white"
+        >Or give us a call</div>
+            </v-container>
 </template>
 
 <script>
@@ -123,4 +135,12 @@ export default {
 .form-main {
     background-color: #b5ada6;
 }
+.width-50{
+    width: 50%
+}
+.width-80{
+    width: 80%;
+    margin:auto
+}
+
 </style>
