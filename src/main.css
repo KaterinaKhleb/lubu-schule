@@ -1,0 +1,24 @@
+@font-face {
+    font-family: "Muller";
+    src: url(/public/fonts/Muller_Regular.ttf)
+}
+
+html .v-application *,
+.v-application,
+.text-h1,
+.text-h2,
+.text-h3,
+.text-h4,
+.text-h5 {
+    font-family: "Muller" !important;
+}
+
+.button {
+    background-color: #416865 !important;
+    color: whitesmoke !important;
+    text-transform: none !important;
+}
+
+.v-card {
+    background: transparent !important;
+}

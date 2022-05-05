@@ -2,8 +2,8 @@
 <template>
     <div>
         <camp-home></camp-home>
-        <CampDescription class="mt-8"></CampDescription>
-        <CampOffers class="mt-8"></CampOffers>
+        <CampDescription class="pt-8"></CampDescription>
+        <CampOffers class="pt-8"></CampOffers>
         <Formular title="Sommer Camp Registration Form" formType="camp"></Formular>
 
     </div>
