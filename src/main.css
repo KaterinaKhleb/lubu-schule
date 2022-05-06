@@ -10,7 +10,7 @@ html .v-application *,
 .text-h3,
 .text-h4,
 .text-h5 {
-    font-family: "Muller" !important;
+    font-family: "Mulish" !important;
 }
 
 .button {
@@ -21,4 +21,22 @@ html .v-application *,
 
 .v-card {
     background: transparent !important;
+}
+
+.curse-underline::before {
+    content: '';
+    position: absolute;
+    bottom: 16px;
+    width: 150px;
+    height: 14px;
+    transform: skew(-12deg) translateY(20%);
+    background: rgba(69, 103, 105, 0.5);
+    /* z-index: -1; */
+}
+
+.curse-underline {
+    padding: 30px 0 8px;
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 900;
 }

@@ -1,43 +1,34 @@
 <template  >
-    <v-container class="brown lighten-5" fluid grid-list-lg>
-        <template >
-            <div class="text-h3 text-center my-3">Our activities:</div>
-            <v-timeline style="width:80% !important"  
-                v-for="item in timelineItems"
-                :key="item.name"
-                clipped
-                  class="mx-auto"
-                dense
-            >
-                <v-timeline-item color="#d28b32" fill-dot small light right>
-                    <v-card>
-                        <v-card-title class="offer-background">
-                            <v-icon dark size="36" class="mr-4"
-                                >{{ item.icon }}
-                            </v-icon>
-                            <h2 class="text-h6 white--text font-weight-light">
-                                {{ item.name }}
-                            </h2>
-                        </v-card-title>
-                        <v-container>
-                            <v-row>
-                                <v-col cols="12" md="8">
-                                    {{ item.text }}
-                                </v-col>
-                                <v-col
-                                    class="hidden-sm-and-down text-right"
-                                    md="4"
-                                >
-                                <img :src="require(`../assets/${item.image}`)" class="img-small">
-                                </v-col>
-                            </v-row>
-                        </v-container>
-                    </v-card>
-                </v-timeline-item>
+    <v-container
+        class="camp-activ-holder"
+        fluid
+        grid-list-lg
+    >
+        <template>
+            <div class="title-activity my-3 mx-auto">
+                <span>Our </span>
+                <span class="curse-underline title-activity">activities:</span>
+            </div>
+            <div class="flexbox mx-auto">
+                <v-card
+                    v-for="item in timelineItems"
+                    :key="item.name"
+                    class="card-item"
+                >
+                            <img class="activ-img" :src="require(`../assets/${item.image}`)"  alt="">
+                            <v-card-title>
+                                {{item.name}}
+                            </v-card-title>
 
-            </v-timeline>
+                            <v-card-subtitle>
+                                {{item.text}}
+                            </v-card-subtitle>
+                            </v-card>
+            <img class="sitting-illustration" :src="require(`../assets/sitting_illustration.png`)" alt="">
+
+            </div>
         </template>
-    </v-container>
+        </v-container>
 </template>
 
 <script>
@@ -45,21 +36,20 @@ export default {
     name: 'CampOffers',
     data() {
         return {
-          
             timelineItems: [
                 {
                     name: 'English learning',
                     text:
                         'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at.  ',
                     icon: 'mdi-book-open-variant',
-                    image: "ttennis-2.jpg"
+                    image: 'english.png',
                 },
                 {
                     name: 'Creative Activities',
                     text:
                         'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at.  ',
                     icon: 'mdi-draw-pen',
-                    image: "ttennis-2.jpg"
+                    image: 'workshops.png',
                 },
 
                 {
@@ -67,39 +57,75 @@ export default {
                     text:
                         'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at.  ',
                     icon: 'mdi-hiking',
-                    image: "ttennis-2.jpg"
+                    image: 'hike.png',
                 },
                 {
                     name: 'Active Sport',
                     text:
                         'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at.  ',
                     icon: 'mdi-basketball',
-                    image: "img_7543.jpg"
+                    image: 'football.jpg',
                 },
                 {
                     name: 'Camping memories ',
                     text:
                         'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at.  ',
                     icon: 'mdi-campfire',
-                    image: "kaminzimmer.jpg"
-                }
-            ]
+                    image: 'chill.jpg',
+                },
+            ],
         };
     },
-    methods: {
-       
-    }
+    methods: {},
 };
 </script>
 
 <style scoped>
+.camp-activ-holder {
+    background-color: #f6f7f8;
+}
 
 .offer-background {
     background-color: #d28b32;
 }
 
-.img-small{
+.img-small {
     width: inherit;
     height: auto;
+}
+
+.title-activity {
+    font-size: 3rem;
+    font-weight: 700;
+    width: 80%;
+    margin: auto;
+}
+
+.curse-underline::before {
+    transform: skew(-12deg) translateY(-30%);
+    width: 200px;
+}
+.flexbox {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    width: 80%;
+
+
+}
+.card-item {
+    list-style: none;
+    margin-left:2%;
+    margin-top: 2%;
+     flex:0 0 30% !important
+}
+.activ-img{
+    width: 100%;
+}
+.sitting-illustration{
+    width: 350px;
+    height: auto;;
+position: absolute;
+right: 0;
+top:56%
 }
 </style>
