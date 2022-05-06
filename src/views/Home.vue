@@ -3,7 +3,7 @@
         <home-screen></home-screen>
         <home-details></home-details>
         <curses-plan></curses-plan>
-        <Formular title="Curses Registration Form" formType="curses"></Formular>
+        <Formular title="Curses" formType="curses"></Formular>
     </span>
 </template>
 

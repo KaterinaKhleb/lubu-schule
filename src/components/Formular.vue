@@ -2,22 +2,30 @@
     <v-container
         id="registerForm"
         fluid
-        class="form-main"
+        class="form-main pt-10 pb-12"
         grid-list-lg
     >
         <v-container grid-list-lg>
-            <v-flex class="display-2  black--text text-xs-center my-5">{{title}}</v-flex>
 
-            <div class="d-flex width-80">
+            <div class="d-flex">
                 <div class="width-50 ">
-                    Call us
+                    <div class="formular-title text-form">Please fill out the form to register for a {{title}}</div>
+                    <div class="text-form mt-8 mr-8">If you have any further questions, please feel free to contact us by phone or via social media.</div>
+                    <div class="d-flex mt-12 mx-7">
+                        <img :src="require(`../assets/frau.png`)">
+                        <div class="d-flex text-form mt-4 ml-5 flex-column"> 
+                            <div>Contact Person</div>
+                            <div>example@gmail.com</div>
+                            <div>0485739573645</div>
+
+                        </div>
+                    </div>
                 </div>
                 <div class="width-50">
-
                     <v-form
                         style="background:white"
                         ref="form"
-                        class="pa-7"
+                        class="pa-7 rounded"
                         v-model="valid"
                         lazy-validation
                     >
@@ -74,25 +82,21 @@
                                                 required
                                             ></v-checkbox>
 
-                                                <v-btn
+                                                <v-btn depressed tile
                                                     :disabled="!valid"
-                                                    color="success"
-                                                    class="mr-4"
+                                                    class="mr-4 button"
                                                     @click="validate"
                                                 >
-                                                    Send
+                                                    Send Request
                                                     </v-btn>
                                                     </v-form>
+                                                    <img class="dots" :src="require(`../assets/dots.png`)" alt="">
 
                 </div>
 
             </div>
         </v-container>
 
-        <div
-            class="text-h4 text-center my-4"
-            color="white"
-        >Or give us a call</div>
             </v-container>
 </template>
 
@@ -133,7 +137,7 @@ export default {
 
 <style scoped>
 .form-main {
-    background-color: #b5ada6;
+    background-color: #416865;
 }
 .width-50{
     width: 50%
@@ -141,6 +145,23 @@ export default {
 .width-80{
     width: 80%;
     margin:auto
+}
+.formular-title{
+     font-size: 3rem;
+     font-weight:800
+}
+.text-form{
+    color: white
+}
+img{
+    height: 100px;
+    width: auto;;
+}
+.dots{
+    position: absolute;
+;   bottom:180px;
+left:47%;
+z-index: 1;
 }
 
 </style>

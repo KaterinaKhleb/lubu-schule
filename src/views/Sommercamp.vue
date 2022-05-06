@@ -4,7 +4,7 @@
         <camp-home></camp-home>
         <CampDescription class="pt-8"></CampDescription>
         <CampOffers class="pt-8"></CampOffers>
-        <Formular title="Sommer Camp Registration Form" formType="camp"></Formular>
+        <Formular title="Sommer Camp " formType="camp"></Formular>
 
     </div>
 </template>

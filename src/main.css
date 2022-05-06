@@ -16,6 +16,7 @@ html .v-application *,
 .button {
     background-color: #416865 !important;
     color: whitesmoke !important;
+    z-index: 9999 !important;
     text-transform: none !important;
 }
 

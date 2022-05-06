@@ -1,6 +1,6 @@
 <template  >
     <v-container
-        class="camp-activ-holder"
+        class="camp-activ-holder pb-12"
         fluid
         grid-list-lg
     >
