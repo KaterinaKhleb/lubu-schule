@@ -1,7 +1,9 @@
 {
     "name": "meal-prep",
     "version": "0.1.0",
-    "node": "16.14.2",
+    "engines": {
+        "node": "16.14.2"
+    },
     "private": true,
     "scripts": {
         "serve": "vue-cli-service serve",
