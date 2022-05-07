@@ -6,6 +6,8 @@
         "serve": "vue-cli-service serve",
         "build": "vue-cli-service build",
         "lint": "vue-cli-service lint",
+        "start": "node app .js",
+        "postinstall": "npm run build",
         "test:e2e": "vue-cli-service test:e2e",
         "test:open": "cypress open",
         "test:record": "cypress run --record"
@@ -13,9 +15,13 @@
     "dependencies": {
         "@babel/polyfill": "^7.0.0-rc.1",
         "axios": "^0.18.0",
+        "body-parser": "^1.20.0",
+        "cors": "^2.8.5",
         "eslint": "^6.7.2",
         "eslint-plugin-vue": "^6.2.2",
+        "express": "^4.18.1",
         "firebase": "^6.4.2",
+        "server-static": "^2.0.5",
         "vue": "^2.5.17",
         "vue-router": "^3.0.1",
         "vuetify": "^2.6.4",
