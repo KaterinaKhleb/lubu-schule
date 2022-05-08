@@ -7,7 +7,7 @@
         >
             <v-spacer class="hidden-md-and-up"></v-spacer>
             <router-link to="/">
-                <span class="title">Lubu School</span>
+                <span class="title">KIT School</span>
             </router-link>
                     <v-spacer class="hidden-sm-and-down"></v-spacer>
 

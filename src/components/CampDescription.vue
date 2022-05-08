@@ -95,7 +95,7 @@ export default {
                 },
                 {
                     name: 'WE SPEAK',
-                    text: 'English, German, Riussian ',
+                    text: 'English, German, Russian ',
                     icon: 'mdi-ab-testing',
                 },
                 {
