@@ -13,10 +13,10 @@
                     <div class="text-form mt-8 mr-8">If you have any further questions, please feel free to contact us by phone or via social media.</div>
                     <div class="d-flex mt-12 mx-7">
                         <img :src="require(`../assets/frau.png`)">
-                        <div class="d-flex text-form mt-4 ml-5 flex-column"> 
-                            <div>Contact Person</div>
-                            <div>example@gmail.com</div>
-                            <div>0485739573645</div>
+                        <div class="d-flex text-form mt-4 ml-5 flex-column">
+                           <div> Natalia Odehowa</div>
+                            <div>info@forum-wbk.de</div>
+                            <div>+4915737264373</div>
 
                         </div>
                     </div>
@@ -53,7 +53,7 @@
                                     required
                                 ></v-text-field>
 
-                                    <v-select
+                                    <v-select class="dropdown"
                                         v-if="formType==='curses'"
                                         color="teal"
                                         v-model="select"
@@ -75,14 +75,16 @@
                                             </template>
                                             </v-textarea>
 
-                                            <v-checkbox
+                                            <!-- <v-checkbox
                                                 v-model="checkbox"
                                                 :rules="[v => !!v || 'You must agree to continue!']"
                                                 label="Do you agree?"
                                                 required
-                                            ></v-checkbox>
+                                            ></v-checkbox> -->
 
-                                                <v-btn depressed tile
+                                                <v-btn
+                                                    depressed
+                                                    tile
                                                     :disabled="!valid"
                                                     class="mr-4 button"
                                                     @click="validate"
@@ -90,12 +92,16 @@
                                                     Send Request
                                                     </v-btn>
                                                     </v-form>
-                                                    <img class="dots" :src="require(`../assets/dots.png`)" alt="">
 
                 </div>
 
             </div>
         </v-container>
+        <img
+            class="dots"
+            :src="require(`../assets/dots.png`)"
+            alt=""
+        >
 
             </v-container>
 </template>
@@ -116,7 +122,7 @@ export default {
         phone: '',
         phoneRules: [v => !!v || 'Phone id required'],
         select: null,
-        items: ['Item 1', 'Item 2', 'Item 3', 'Item 4'],
+        items: ["English (Children Group)", "English (Teenagers Group)", "German (Children Group)", "German (Teenagers Group)", "German (Parents Group)", "Drawing" ],
         checkbox: false,
         message: '',
     }),
@@ -139,29 +145,31 @@ export default {
 .form-main {
     background-color: #416865;
 }
-.width-50{
-    width: 50%
+.width-50 {
+    width: 50%;
 }
-.width-80{
+.width-80 {
     width: 80%;
-    margin:auto
+    margin: auto;
 }
-.formular-title{
-     font-size: 3rem;
-     font-weight:800
+.formular-title {
+    font-size: 3rem;
+    font-weight: 800;
 }
-.text-form{
-    color: white
+.text-form {
+    color: white;
 }
-img{
+img {
     height: 100px;
-    width: auto;;
+    width: auto;
 }
-.dots{
-    position: absolute;
-;   bottom:180px;
-left:47%;
-z-index: 1;
+.dots {
+    position: relative;
+    bottom: 60px;
+    left: 47%;
+    z-index: 1;
 }
-
+.dropdown{
+    z-index: 99999;
+}
 </style>

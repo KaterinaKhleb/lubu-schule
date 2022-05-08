@@ -1,37 +1,42 @@
 <template>
-    <v-container id="curseSection" grid-list-lg>
+    <v-container fluid id="curseSection" grid-list-lg>
+        <v-container grid-list-lg>
+            <v-row
+                cols="12"
+                sm="6"
+                md="8"
+            >
+                <v-col
+                    cols="12"
+                    sm="12"
+                >
         <v-layout row>
             <v-flex class="display-2  black--text text-xs-center my-5"
-                >Available free courses</v-flex
+                ><span>Available</span> <span> free courses</span></v-flex
             >
         </v-layout>
-        <v-layout row wrap class="meal-plans">
+        <v-layout row wrap >
             <v-expansion-panels popup>
-                <v-expansion-panel v-for="(item, i) in 5" :key="i">
+                <v-expansion-panel v-for="(curse, i) in curses" :key="i">
                     <v-expansion-panel-header light >
-                        Curse blabla
+                        {{curse.name}}
                     </v-expansion-panel-header>
                     <v-expansion-panel-content >
                         <div class="d-flex mt-5">
                             <div class="width-50" color="red">
                                 <span class="text-h5 curse-underline ">Description:</span>
                                 <br>
-                                <span class="mt-7 pt-9"
-                                    >Lorem ipsum dolor sit amet, consectetur
-                                    adipiscing elit, sed do eiusmod tempor
-                                    incididunt ut labore et dolore magna aliqua.
-                                    Ut enim ad minim veniam, quis nostrud
-                                    exercitation ullamco laboris nisi ut aliquip
-                                    ex ea commodo consequat.
-                                </span>
+                                <div class=" pt-6"
+                                    >{{curse.desc}}
+                                </div>
                             </div>
-                            <div  class="width-50">
-                                <span class="text-h5 curse-underline">When:</span>
+                            <div  class="width-50 ml-12">
+                                <span class="text-h5 curse-underline">Groups</span>
                                  <br>
-                                <h4>Tuesday 16:00 - 18:00</h4>
-                                <h4>Friday 17:00 - 18:00</h4>
-                                <h4>Saturday 17:00 - 18:00</h4>
-                                <h4>Sunday 17:00 - 18:00</h4>
+                                 <div class="pt-6" v-for="(group) in curse.groups " :key="group.group">
+                                     <div><h4>{{group.group}}: {{group.time}}</h4></div>
+                                 </div>
+                                
 
                             </div>
                         </div>
@@ -40,12 +45,38 @@
                 </v-expansion-panel>
             </v-expansion-panels>
         </v-layout>
+                </v-col>
+            </v-row>
+        </v-container>
+    <img class="dots-curses" :src="require(`../assets/dots_dark.svg`)" alt="">
     </v-container>
 </template>
 
 <script>
 export default {
     name: 'CursesPlan',
+       data() {
+        return {
+            curses: [
+                {
+                    name: 'English',
+                    desc: 'English lessons are divided into two age groups - children (5-10 y.o.) and teenagers(11 - 16 y.o.). The level of the language depends on the group and varies from A1 to B2.',
+                    groups: [{group: "Children", time: "Saturday 10:00 - 10:45"},{group: "Teenagers", time: "Saturday 11:00 - 11:45"} ]
+                },
+                      {
+                    name: 'German',
+                    desc: 'German lessons are divided into three groups - for children, teenagers and theor parents. Level od the language is A1-A2. Learning material for adults has different topics, than material for children.',
+                    groups: [{group: "Children", time: "Saturday 11:00 - 11:45"},{group: "Teenagers", time: "Saturday 10:00 - 10:45"}, {group: "Parents", time: "Saturday 10:00 - 11:45"} ]
+                },
+                    {
+                    name: 'Drawing',
+                    desc: 'Art classes are focused on providing children an opportunity to enhance their creativity, improve imagination and let their parents have some break durin the coffe break ;)',
+                    groups: [{group: "Children", time: "Saturday 12:00 - 11:45"},{group: "Teenagers", time: "Saturday 12:00 - 12:45"}]
+                },
+        
+            ],
+        };
+    },
       methods: {
         scrollMeTo(refName) {
             const element = document.getElementById(refName);
@@ -57,9 +88,11 @@ export default {
 </script>
 
 <style scoped>
+#curseSection{
+    background-color: #f6f7f8;
+}
 .width-50 {
     width: 48%;
-    margin: auto;
 }
 
 .curse-underline::before {
@@ -75,5 +108,12 @@ export default {
 .curse-underline {
     padding: 30px 0 8px;
     position: relative;
+}
+.dots-curses{
+    position: relative;
+    left: 80px;
+    bottom:80px;
+    height: 120px;
+    width: auto
 }
 </style>

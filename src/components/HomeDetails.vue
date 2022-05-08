@@ -1,92 +1,60 @@
 <template>
-    <v-container fluid class="brown lighten-4">
+    <v-container
+        fluid
+        class="school-holder"
+    >
         <v-container grid-list-lg>
-            <v-layout column>
-                <v-flex
-                    class="display-2  black--text text-xs-center my-5"
-                    >About us</v-flex
+            <v-row
+                cols="12"
+                sm="6"
+                md="8"
+            >
+                <v-col
+                    cols="12"
+                    sm="8"
                 >
-                <v-flex>
-                    <div class="headline mt-3 black--text font-weight-bold">
-                        Lorem ipsum
-                    </div>
-                    <p class="subheading mt-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Cras pulvinar risus quis mauris interdum, in euismod
-                        nibh pretium. Etiam pulvinar tincidunt dapibus. Quisque
-                        sollicitudin, mauris a consequat consectetur, turpis
-                        nisl sollicitudin enim, id consectetur neque neque nec
-                        metus. Pellentesque dolor nisi, vulputate quis lobortis
-                        ac, tincidunt et quam. Mauris pulvinar blandit nisi nec
-                        mattis. Aliquam accumsan ut sem eget efficitur. Vivamus
-                        in tortor gravida eros laoreet condimentum nec vel dui.
-                        Nullam quam massa, ultrices eget tincidunt a, pulvinar
-                        ac libero.
-                    </p>
-                </v-flex>
-                <v-flex>
-                    <div class="headline mt-3 black--text font-weight-bold">
-                        Lorem ipsum
-                    </div>
-                    <p class="subheading mt-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Cras pulvinar risus quis mauris interdum, in euismod
-                        nibh pretium. Etiam pulvinar tincidunt dapibus. Quisque
-                        sollicitudin, mauris a consequat consectetur, turpis
-                        nisl sollicitudin enim, id consectetur neque neque nec
-                        metus. Pellentesque dolor nisi, vulputate quis lobortis
-                        ac, tincidunt et quam. Mauris pulvinar blandit nisi nec
-                        mattis. Aliquam accumsan ut sem eget efficitur. Vivamus
-                        in tortor gravida eros laoreet condimentum nec vel dui.
-                        Nullam quam massa, ultrices eget tincidunt a, pulvinar
-                        ac libero.
-                    </p>
+                    <v-layout column>
+                        <v-flex class="display-2  black--text text-xs-center my-5">About us</v-flex>
+                        <v-flex>
+                            <div class="headline mt-3 black--text font-weight-bold">
+                                What is our motivation?
+                            </div>
+                            <p class="subheading mt-3">
+                                Due to language deficits, refugee children need help in coping with school material. Since the help offered by the schools is usually not sufficient, individual support in the form of tutoring tailored to the child is necessary. It is planned to involve refugee teachers from Ukraine in the project, who will tutor between five and ten refugee students in various subjects. There will be close cooperation with the German subject teachers, so that reference can be made to ongoing subject teaching at any time. In cooperation with the Forum der Kulturen/ or a school, the Ukrainian teachers who have fled are given information about the project in order to arouse their interest in voluntary work with students from Ukraine.  </p>
+                        </v-flex>
+                        <v-flex>
+                            <div class="headline mt-3 black--text font-weight-bold">
+                                What do we offer?
+                            </div>
+                            <p class="subheading mt-3">
+                             Tutoring in DAZ, mathematics, English and all other common school subjects is planned, and the books and teaching materials will be used here. In addition, we want to get dictionaries and vocabulary trainers for all tutoring subjects to support teachers and students. In addition to support in the classic subjects, language courses, creative and play activities for children are to be offered.
+Another important point of our project is the psychological support of volunteers. It is essential for children to keep contact with their age group, keep studying and developing their skills in order to give them back the feeling of a safe live and support. </p>
+                         
+                        </v-flex>
 
-                    <p class="subheading mt-3">
-                        Nullam nec massa eu est fringilla lobortis. Praesent in
-                        enim in justo blandit varius. Cras placerat arcu in
-                        sapien rhoncus aliquet. Sed interdum tortor et tincidunt
-                        condimentum. Etiam consequat mi leo, in suscipit odio
-                        scelerisque molestie. Nam et purus consequat, iaculis
-                        augue vel, sagittis ligula. Vestibulum aliquet vulputate
-                        erat. Phasellus id mauris mauris. Nunc a maximus dolor.
-                        Curabitur ut vestibulum arcu. Curabitur non lacus justo.
-                        Cras varius a magna in semper. Nulla eros ante,
-                        consectetur faucibus sapien eu, rhoncus imperdiet dui.
-                        Sed viverra iaculis nunc, id pulvinar massa egestas
-                        vitae.
-                    </p>
+                    </v-layout>
+                    </v-col>
+                       <v-col
+                    cols="12"
+                    sm="4"
+                >
+                <img :src="require(`../assets/Illustration_girl.svg`)"  alt="">
 
-                    <p class="subheading mt-3">
-                        Aenean erat metus, imperdiet eget nisl laoreet,
-                        venenatis ultricies ante. In interdum ante vel dictum
-                        ullamcorper. Pellentesque habitant morbi tristique
-                        senectus et netus et malesuada fames ac turpis egestas.
-                        Integer sit amet gravida diam. Aliquam in tempor metus.
-                        Fusce pellentesque pharetra sem, et luctus justo tempor
-                        dictum. Ut feugiat est sed tristique egestas. Nullam
-                        posuere a nunc in blandit. Vestibulum ante ipsum primis
-                        in faucibus orci luctus et ultrices posuere cubilia
-                        Curae; Suspendisse laoreet ultrices eros, nec malesuada
-                        enim semper sit amet. Maecenas efficitur consectetur
-                        accumsan. Etiam in aliquam turpis, ut pharetra nulla.
-                        Vestibulum malesuada, nulla id elementum cursus, nibh
-                        dui rhoncus felis, suscipit mattis felis enim sed ex.
-                        Pellentesque scelerisque aliquam lorem, vel mattis nibh
-                        tincidunt ac. Suspendisse ac nibh sit amet lacus
-                        ullamcorper maximus.
-                    </p>
-                </v-flex>
-                
-            </v-layout>
+                    </v-col>
+                    </v-row>
+
         </v-container>
-    </v-container>
+        </v-container>
 </template>
 
 <script>
 export default {
-    name: 'HomeDetails'
+    name: 'HomeDetails',
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.school-holder {
+    background-color: #f6f7f8;
+}
+</style>

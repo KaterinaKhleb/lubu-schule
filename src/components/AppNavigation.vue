@@ -9,12 +9,14 @@
             <router-link to="/">
                 <span class="title">Lubu School</span>
             </router-link>
+                    <v-spacer class="hidden-sm-and-down"></v-spacer>
+
             <v-btn
                 depressed
                 dark
                 outlined
                 tile
-                class="hidden-sm-and-down ml-12 nav-menu"
+                class="hidden-sm-and-down  mr-5 nav-menu"
                 to="/"
                 data-cy="menuBtn"
             >Curses</v-btn>
@@ -23,11 +25,10 @@
                     dark
                     outlined
                     tile
-                    class="hidden-sm-and-down ml-12 nav-menu"
+                    class="hidden-sm-and-down mr-12 nav-menu"
                     to="/sommercamp"
                     data-cy="menuBtn"
                 >Summer Camp</v-btn>
-                    <v-spacer class="hidden-sm-and-down"></v-spacer>
                     <v-col cols="1">
                         <v-select
                             v-model="selectedLanguage"
@@ -63,5 +64,10 @@ a {
 }
 .title {
     color: white;
+}
+.nav-menu{
+    border: none !important;
+    border-bottom: 1px solid white !important;
+
 }
 </style>
