@@ -29,8 +29,7 @@ export default {
 <style scoped>
 .home-hero {
     background: url('../assets/drawers.jpeg');
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: 100vh;
 }
 </style>

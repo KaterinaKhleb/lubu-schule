@@ -4,30 +4,50 @@
         fluid
         grid-list-lg
     >
-        <template>
-            <div class="title-activity my-3 mx-auto">
-                <span>Our </span>
-                <span class="curse-underline title-activity">activities:</span>
-            </div>
-            <div class="flexbox mx-auto">
-                <v-card
-                    v-for="item in timelineItems"
-                    :key="item.name"
-                    class="card-item"
-                >
-                            <img class="activ-img" :src="require(`../assets/${item.image}`)"  alt="">
-                            <v-card-title>
-                                {{item.name}}
-                            </v-card-title>
+        <v-container grid-list-lg>
+            <v-layout column>
+                <v-row no-gutters>
+                    <v-col
+                        cols="12"
+                        sm="6"
+                        md="10"
+                    >
+                        <template>
+                            <div class="title-activity my-3 mx-auto">
+                                <span>Our </span>
+                                <span class="curse-underline title-activity">activities:</span>
+                            </div>
+                            <div class="flexbox mx-auto">
+                                <v-card
+                                    v-for="item in timelineItems"
+                                    :key="item.name"
+                                    class="card-item"
+                                >
+                                    <img
+                                        class="activ-img"
+                                        :src="require(`../assets/${item.image}`)"
+                                        alt=""
+                                    >
+                                        <v-card-title>
+                                            {{item.name}}
+                                        </v-card-title>
 
-                            <v-card-subtitle>
-                                {{item.text}}
-                            </v-card-subtitle>
-                            </v-card>
-            <img class="sitting-illustration" :src="require(`../assets/sitting_illustration.png`)" alt="">
+                                        <v-card-subtitle>
+                                            {{item.text}}
+                                        </v-card-subtitle>
+                                        </v-card>
+                                        <img
+                                            class="sitting-illustration"
+                                            :src="require(`../assets/sitting_illustration.png`)"
+                                            alt=""
+                                        >
 
-            </div>
-        </template>
+                            </div>
+                        </template>
+                        </v-col>
+                </v-row>
+            </v-layout>
+        </v-container>
         </v-container>
 </template>
 
@@ -97,7 +117,6 @@ export default {
 .title-activity {
     font-size: 3rem;
     font-weight: 700;
-    width: 80%;
     margin: auto;
 }
 
@@ -108,24 +127,21 @@ export default {
 .flexbox {
     display: flex !important;
     flex-wrap: wrap !important;
-    width: 80%;
-
-
 }
 .card-item {
     list-style: none;
-    margin-left:2%;
+    margin-left: 2%;
     margin-top: 2%;
-     flex:0 0 30% !important
+    flex: 0 0 30% !important;
 }
-.activ-img{
+.activ-img {
     width: 100%;
 }
-.sitting-illustration{
+.sitting-illustration {
     width: 350px;
-    height: auto;;
-position: absolute;
-right: 0;
-top:56%
+    height: auto;
+    position: absolute;
+    right: 0;
+    top: 56%;
 }
 </style>

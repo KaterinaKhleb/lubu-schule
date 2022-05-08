@@ -24,11 +24,9 @@ export default {
 <style scoped>
 .camp-home {
     background: url('../assets/camp.png') center no-repeat;
+    background-size: cover;
+    height: 100vh;
 
-width: 1512px;
-height: 545px;
-left: 0px;
-top: 0px;
 }
 .title-camp-home{
     font-weight: 900;

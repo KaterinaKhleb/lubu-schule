@@ -16,8 +16,6 @@ export default new Vuex.Store({
     actions: {
         async getContent({ state }, lang) {
             console.log('GETCONTENT called');
-
-
             const data = await axios.get(`./json/${lang}.json`).then(r => {
                 const langContent = r.data
                 console.log(langContent.welcome)

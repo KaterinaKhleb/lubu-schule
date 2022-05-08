@@ -48,7 +48,7 @@
                 </v-col>
             </v-row>
         </v-container>
-    <img class="dots-curses" :src="require(`../assets/dots_dark.svg`)" alt="">
+    <!-- <img class="dots-curses" :src="require(`../assets/dots_dark.svg`)" alt=""> -->
     </v-container>
 </template>
 
