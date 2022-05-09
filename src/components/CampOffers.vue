@@ -60,14 +60,14 @@ export default {
                 {
                     name: 'English learning',
                     text:
-                        'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at.  ',
+                        'In our sommer camp we encourage children to start communicating in English with one another, daily language lessons will support them in the learning process. ',
                     icon: 'mdi-book-open-variant',
                     image: 'english.png',
                 },
                 {
                     name: 'Creative Activities',
                     text:
-                        'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at.  ',
+                        'We prepare various workshops, where we work on fun DIY projects. It is essential to keep creativity developing, and it is a big part of our summer camp! ',
                     icon: 'mdi-draw-pen',
                     image: 'workshops.png',
                 },
@@ -75,21 +75,21 @@ export default {
                 {
                     name: 'Hiking',
                     text:
-                        'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at.  ',
+                        'The best opportunity to explore the Mother Nature, learn about Flora and Fauna of the Black Forest.',
                     icon: 'mdi-hiking',
                     image: 'hike.png',
                 },
                 {
                     name: 'Active Sport',
                     text:
-                        'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at.  ',
+                        'Tennis, Football, Volleyball and many other types of sport is planned to promote the team spirit, stay active and just have fun! ',
                     icon: 'mdi-basketball',
                     image: 'football.jpg',
                 },
                 {
                     name: 'Camping memories ',
                     text:
-                        'Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod convenire principes at.  ',
+                        'Smell of fire, guitar songs, fresh air and sound of crickets - those are the warmest childhood memories that we will create together! ',
                     icon: 'mdi-campfire',
                     image: 'chill.jpg',
                 },
