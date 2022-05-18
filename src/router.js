@@ -11,12 +11,17 @@ const router = new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [{
-            path: '/',
+            path: '/home',
             name: 'home',
             component: Home
         },
         {
             path: '/sommercamp',
+            name: 'sommercamp',
+            component: Sommercamp
+        },
+        {
+            path: '/',
             name: 'sommercamp',
             component: Sommercamp
         },

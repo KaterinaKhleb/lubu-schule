@@ -1,4 +1,31 @@
 {
-    "welcome": "Eine Schule für alle"
-
+    "campName": "Sommercamp",
+    "campMotto": " Abenteuer, Lernen, Spaß und Nature! ",
+    "camDescPartOne": "Unter dem Motto Abenteuer, Lernen, Spiel und Spaß hat sich das Projekt „Sommercamp“ des Vereines FWBK (Internationales Forum für Wissenschaft, Bildung und Kultur e.V.)  zur Aufgabe gemacht Kindern und Jugendlichen verschiedener Nationalitäten, Religionen und Kulturen aktiv und spielend Englisch beizubringen.",
+    "campDescription": "Es handelt sich hierbei nicht um einen klassischen Sprachkurs – nein, es sind sieben Tage voller spannender Aktivitäten, ein Englischkurs auf spielerische Art. Englisch lernen gepaart mit Kreativworkshops, aber auch der Umgang und das Leben in der Natur wird durch beispielsweise einer Waldwanderung gefördert. Ebenso kommen Sport und Abenteuer nicht zu kurz beim Sommercamp- die teilnehmenden Kinder stärken so ihr Verständnis und ihre Toleranz für andere Kulturen, indem sie gemeinsam Stockbrot am Lagerfeuer machen, oder Fußball und Tischtennis spielen. ",
+    "ourActivities": "Unsere Aktivitäten",
+    "activity1Name": "Englisch lernen",
+    "activity1Desc": "Ежедневные занятия английским и постоянная практика в живом общении помогут детям чувстовать себя увереннее, говоря на чужом языке и способствуют улучшению уровня языка. ",
+    "activity2Name": "Креативные воркшопы",
+    "activity2Desc": "Показывать свои чувства через творчество можно и нужно! Для этого мы подготовили разнообразные уголки для лепки, рисования, скрапбукинга, а так же интересных творческих игр! ",
+    "activity3Name": "Походы",
+    "activity3Desc": "Рюкзаки за плечо и вперед изучать флору и фауну одного из самых красивых лесов Германии - Черного Леса!",
+    "activity4Name": "Спорт",
+    "activity4Desc": "Теннис, футбол, воллейбол и множество других видов спорта помогут развить командный дух, поддержать тонус и поднять настроение! ",
+    "activity5Name": "Лагерные воспоминания",
+    "activity5Desc": "Запах костра, гитара, свежий воздух и стрекотание сверчков - все это неотъемлемая часть детского летнего лагеря. Создадим бесценные воспоминания из детства вместе с друзьями! ",
+    "formTitle": "Bitte das Formular ausfüllen oder uns per Email/Phone kontaktieren ",
+    "formSubtitle": "Falls Sie noch Fragen Haben, bitte uns eine Nachricht schreiben, anrufen oder in sozial Medien uns kontaktieren.",
+    "where": "Wo",
+    "when": "Wann",
+    "ageGroup": "Alter",
+    "weSpeak": "We speak",
+    "price": "Preis",
+    "places": "Kapazität",
+    "name": "Name, Vorname",
+    "email": "Email",
+    "phone": "Phone Nummer",
+    "message": "Nachricht",
+    "optional": "optional",
+    "send": "Schicken"
 }
