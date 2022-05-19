@@ -31,6 +31,8 @@
     "message": "Message",
     "optional": "optional",
     "send": "Send request",
-    "registerNow": "Register now"
+    "registerNow": "Register now",
+    "success": "The Request is successfully sent"
+
 
 }

@@ -30,5 +30,6 @@
     "message": "Nachricht",
     "optional": "optional",
     "send": "Schicken",
-    "registerNow": "Jetzt sich anmelden"
+    "registerNow": "Jetzt sich anmelden",
+    "success": "die Anfrage wurde verschickt."
 }

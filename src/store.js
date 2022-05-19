@@ -39,9 +39,8 @@ export default new Vuex.Store({
         optional: "",
         send: "",
         langs: "",
-        registerNow: ""
-
-
+        registerNow: "",
+        success: ""
     },
     mutations: {
         setLanguage(state, lan) {
@@ -83,7 +82,8 @@ export default new Vuex.Store({
                 state.optional = c.optional,
                 state.send = c.send,
                 state.langs = c.langs,
-                state.registerNow = c.registerNow
+                state.registerNow = c.registerNow,
+                state.success = c.success
             this.commit('setLanguage', lang);
             //get content here
         }
@@ -123,6 +123,6 @@ export default new Vuex.Store({
         campSubname: state => state.campSubname,
         langs: state => state.langs,
         registerNow: state => state.registerNow,
-
+        success: state => state.success,
     }
 });

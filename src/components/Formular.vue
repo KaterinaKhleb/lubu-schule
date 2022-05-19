@@ -94,7 +94,7 @@
         <v-alert 
             type="success"
             v-model="successRequest"
-            >Request successfully sent</v-alert>
+            >{{success}}</v-alert>
     </v-container>
 </template>
 
@@ -137,7 +137,8 @@ export default {
             'optional',
             'send',
             'formSubtitle',
-            'formTitle'
+            'formTitle',
+            "success"
         ])
     },
 
