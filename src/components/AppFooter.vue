@@ -1,15 +1,15 @@
 <template>
     <v-footer dark padless>
-        <v-card style="width:100%" color="#456769" flat tile>
+        <v-card style="width:94%" color="#456769" flat tile>
             <v-card-title >
-                <strong class="subheading"
+                <!-- <strong class="subheading"
                     >Get connected with us on social networks!</strong
-                >
+                > -->
                 <v-spacer></v-spacer>
 
-                <v-btn v-for="icon in icons" :key="icon" class="mx-4" dark icon>
-                    <v-icon size="24px">
-                        {{ icon }}
+                <span class="mr-4"> Telegramm:  </span> <v-btn v-for="icon in icons" :href="icon.href" :key="icon.text"  dark icon>
+                    <v-icon  size="24px">
+                     {{ icon.icon }}
                     </v-icon>
                 </v-btn>
             </v-card-title>
@@ -27,7 +27,7 @@
 export default {
     name: 'AppFooter',
     data: () => ({
-        icons: ['mdi-facebook', 'mdi-send', 'mdi-instagram'],
+        icons: [{text: "Tlegramm:", icon: 'mdi-send', href: "https://t.me/+7pzjhBIQFWcwOTNi" } ],
     }),
 };
 </script>

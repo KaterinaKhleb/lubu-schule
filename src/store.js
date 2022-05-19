@@ -12,6 +12,7 @@ export default new Vuex.Store({
         campMotto: " ",
         camDescPartOne: "",
         campDescription: "",
+        campSubname: "",
         ourActivities: "",
         activity1Name: "",
         activity1Desc: "",
@@ -36,7 +37,10 @@ export default new Vuex.Store({
         phone: "",
         message: "",
         optional: "",
-        send: ""
+        send: "",
+        langs: "",
+        registerNow: ""
+
 
     },
     mutations: {
@@ -50,6 +54,7 @@ export default new Vuex.Store({
             const c = data.data
             state.campName = c.campName,
                 state.campMotto = c.campMotto,
+                state.campSubname = c.campSubname,
                 state.camDescPartOne = c.camDescPartOne,
                 state.campDescription = c.campDescription,
                 state.ourActivities = c.ourActivities,
@@ -76,8 +81,9 @@ export default new Vuex.Store({
                 state.phone = c.phone,
                 state.message = c.message,
                 state.optional = c.optional,
-                state.send = c.send
-                // })
+                state.send = c.send,
+                state.langs = c.langs,
+                state.registerNow = c.registerNow
             this.commit('setLanguage', lang);
             //get content here
         }
@@ -114,5 +120,9 @@ export default new Vuex.Store({
         message: state => state.message,
         optional: state => state.optional,
         send: state => state.send,
+        campSubname: state => state.campSubname,
+        langs: state => state.langs,
+        registerNow: state => state.registerNow,
+
     }
 });

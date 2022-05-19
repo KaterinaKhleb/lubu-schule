@@ -4,7 +4,7 @@
         fluid
         grid-list-lg
     >
-        <v-container grid-list-lg>
+        <v-container v-if="ourActivities" grid-list-lg>
             <v-layout column>
                 <v-row no-gutters>
                     <v-col
@@ -14,8 +14,7 @@
                     >
                         <template>
                             <div class="title-activity my-3 mx-auto">
-                                <span>Our </span>
-                                <span class="curse-underline title-activity">activities:</span>
+                                <span class="curse-underline title-activity">{{ourActivities}}:</span>
                             </div>
                             <div class="flexbox mx-auto">
                                 <v-card
@@ -52,51 +51,50 @@
 </template>
 
 <script>
+import {mapActions, mapGetters} from "vuex";
+
 export default {
     name: 'CampOffers',
-    data() {
-        return {
-            timelineItems: [
+    methods: {},
+    computed: {
+        ...mapGetters(["ourActivities", "activity1Name", "activity1Desc",  "activity2Name", "activity2Desc", "activity3Name", "activity3Desc", "activity4Name", "activity4Desc", "activity5Name", "activity5Desc"]),
+
+        timelineItems(){
+            return  [
                 {
-                    name: 'English learning',
-                    text:
-                        'In our sommer camp we encourage children to start communicating in English with one another, daily language lessons will support them in the learning process. ',
+                    name: this.activity1Name,
+                    text:this.activity1Desc,
                     icon: 'mdi-book-open-variant',
                     image: 'english.png',
                 },
                 {
-                    name: 'Creative Activities',
-                    text:
-                        'We prepare various workshops, where we work on fun DIY projects. It is essential to keep creativity developing, and it is a big part of our summer camp! ',
+                    name: this.activity2Name,
+                    text:this.activity2Desc,
                     icon: 'mdi-draw-pen',
                     image: 'workshops.png',
                 },
 
                 {
-                    name: 'Hiking',
-                    text:
-                        'The best opportunity to explore the Mother Nature, learn about Flora and Fauna of the Black Forest.',
+                    name: this.activity3Name,
+                    text:this.activity3Desc,
                     icon: 'mdi-hiking',
                     image: 'hike.png',
                 },
                 {
-                    name: 'Active Sport',
-                    text:
-                        'Tennis, Football, Volleyball and many other types of sport is planned to promote the team spirit, stay active and just have fun! ',
+                    name: this.activity4Name,
+                    text: this.activity4Desc,
                     icon: 'mdi-basketball',
                     image: 'football.jpg',
                 },
                 {
-                    name: 'Camping memories ',
-                    text:
-                        'Smell of fire, guitar songs, fresh air and sound of crickets - those are the warmest childhood memories that we will create together! ',
+                    name: this.activity5Name,
+                    text:this.activity5Desc,
                     icon: 'mdi-campfire',
                     image: 'chill.jpg',
                 },
-            ],
-        };
+            ]
+        }
     },
-    methods: {},
 };
 </script>
 

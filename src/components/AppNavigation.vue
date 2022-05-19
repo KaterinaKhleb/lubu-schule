@@ -11,7 +11,7 @@
             </router-link>
                     <v-spacer class="hidden-sm-and-down"></v-spacer>
 
-            <v-btn
+            <!-- <v-btn
                 depressed
                 dark
                 outlined
@@ -19,7 +19,7 @@
                 class="hidden-sm-and-down  mr-5 nav-menu"
                 to="/"
                 data-cy="menuBtn"
-            >Curses</v-btn>
+            >Curses</v-btn> -->
                 <v-btn
                     depressed
                     dark
@@ -36,6 +36,7 @@
                             append-outer-icon="mdi-earth"
                             menu-props="auto"
                             hide-details
+                            @change="getContent(selectedLanguage)"
                         ></v-select>
                     </v-col>
 
@@ -44,14 +45,18 @@
 </template>
 
 <script>
+import {mapActions, mapGetters} from "vuex";
 export default {
     name: 'AppNavigation',
     data() {
         return {
             drawer: false,
-            selectedLanguage: 'en',
+            selectedLanguage: 'de',
             langs: ['en', 'ukr', 'ru', 'de'],
         };
+    },
+        methods: {
+      ...mapActions(["getContent"])  
     },
   
 };

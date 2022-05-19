@@ -18,23 +18,20 @@
                         >
                             <div class="pt-4 title-camp-desc">
                                 <span>
-                                    <b>Summer camp </b> - <br> Vacation in Schwarzwald!</span>
+                                    <b>{{campName}} </b> - <br> {{campSubname}}</span>
                             </div>
 
                             <v-container class="mt-3">
-                                <div class="info-text">The project "Summer Camp" of the association FWBK (International Forum for Science, Education and Culture e.V.) has the motto adventure, learning, play and fun and has set itself the task of actively and playfully teaching English to children and young people of different nationalities, religions, and cultures.
-                                </div>
+                                <div class="info-text">{{camDescPartOne}}   </div>
                                 <br><br>
-                                <div class="info-text">
-                                    This is not a classical language course, it is seven days full of exciting activities, an English course in a playful way. English learning paired with creative workshops and the contact and life in nature are promoted by, for example, a forest hike. Sports and adventure are also part of the summer camp - the participating children strengthen their understanding and tolerance for other cultures by making bread on the campfire or playing soccer and table tennis.
-                                </div><br><br>
-                                <div class="info-text">To book the place, simply contact us on 017654345767 or register using the form below.</div>
+                                <div class="info-text">{{campDescription}}    </div><br><br>
+                                <!-- <div class="info-text">To book the place, simply contact us on 017654345767 or register using the form below.</div> -->
 
                                 <v-btn
                                     class="button button-camp-desc mt-5 px-8 py-6"
                                     depressed
                                     tile
-                                >Register now </v-btn>
+                                >{{registerNow}}</v-btn>
 
                             </v-container>
 
@@ -50,8 +47,8 @@
                                     tile
                                 >
                                     <div
-                                        v-for="item in descItems"
-                                        :key="item.name"
+                                        v-for="(item, index) in descItems"
+                                        :key="index"
                                         class="d-flex flex-column"
                                     >
                                         <span class=" curse-underline mx-6 mt-5 mb-2">{{item.name}}</span>
@@ -72,41 +69,46 @@
 </template>
 
 <script>
+import {mapActions, mapGetters} from "vuex";
+
 export default {
     name: 'CampDescription',
-    data() {
-        return {
-            descItems: [
+    
+    computed: {
+        ...mapGetters(["where", "when", "ageGroup", "weSpeak", "price", "registerNow",  "places", "camDescPartOne", "campDescription", "campName", "campSubname", "langs"]),
+        descItems (){
+            return[
                 {
-                    name: 'WHERE',
+                    name:this.where,
                     text: 'Aschenhütte, Bad Herrenalb',
                     icon: 'mdi-map-marker',
                 },
                 {
-                    name: 'WHEN',
+                    name: this.when,
                     text: '21-27.8.2022 ',
                     icon: 'mdi-clock-outline',
                 },
 
                 {
-                    name: 'AGE GROUP',
+                    name: this.ageGroup,
                     text: '8-13 ',
                     icon: 'mdi-hiking',
                 },
                 {
-                    name: 'WE SPEAK',
-                    text: 'English, German, Russian ',
+                    name: this.weSpeak,
+                    text: this.langs,
                     icon: 'mdi-ab-testing',
                 },
                 {
-                    name: 'PRICE',
+                    name: this.price,
                     text: '300 Euro  ',
                     icon: 'mdi-cash',
                 },
-            ],
-        };
-    },
-};
+            ]
+        }
+
+    }
+}
 </script>
 
 <style scoped>

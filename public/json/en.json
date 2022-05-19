@@ -2,6 +2,7 @@
     "welcome": "School for everyone",
     "campName": "Summer camp",
     "campMotto": "Advanture, Learning and Nature! ",
+    "campSubname": "Vacation in Black Forest!",
     "camDescPartOne": "Our Summer Camp is an initiative of the association FWBK (International Forum for Science, Education and Culture e.V.). Its goal is adventure, learning, play and fun and has set itself the task of actively and playfully teaching English to children and young people of different nationalities, religions, and cultures. ",
     "campDescription": "We welcome children in the heart of the Black Forest to take part in a one week advanture!This is not a classical language course, it is seven days full of exciting activities, an English course in a playful way. English learning paired with creative workshops and the contact and life in nature are promoted by, for example, a forest hike. Sports and adventure are also part of the summer camp - the participating children strengthen their understanding and tolerance for other cultures by making bread on the campfire or playing soccer and table tennis.  ",
     "ourActivities": "Our activities",
@@ -17,10 +18,11 @@
     "activity5Desc": "Smell of fire, guitar songs, fresh air and sound of crickets - those are the warmest childhood memories that we will create together! ",
     "formTitle": "Please fill out the form to register for a Summer Camp",
     "formSubtitle": "If you have any further questions, please feel free to contact us by phone or via social media.",
-    "where": "где",
+    "where": "Where",
     "when": "when",
     "ageGroup": "Age Group ",
     "weSpeak": "We speak",
+    "langs": "German, Russian, English, Ukrainian",
     "price": "Price",
     "places": "How many places",
     "name": "Name",
@@ -28,5 +30,7 @@
     "phone": "Phone number",
     "message": "Message",
     "optional": "optional",
-    "send": "Send request"
+    "send": "Send request",
+    "registerNow": "Register now"
+
 }

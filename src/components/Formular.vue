@@ -6,18 +6,15 @@
         grid-list-lg
     >
         <v-container grid-list-lg>
-
             <div class="d-flex">
                 <div class="width-50 ">
-                    <div class="formular-title text-form">Please fill out the form to register for a {{title}}</div>
-                    <div class="text-form mt-8 mr-8">If you have any further questions, please feel free to contact us by phone or via social media.</div>
+                    <div class="formular-title text-form">{{ formTitle }}</div>
+                    <div class="text-form mt-8 mr-8">{{ formSubtitle }}</div>
                     <div class="d-flex mt-12 mx-7">
-                        <img :src="require(`../assets/frau.png`)">
+                        <img :src="require(`../assets/frau.png`)" />
                         <div class="d-flex text-form mt-4 ml-5 flex-column">
-                           <div> Natalia Odehowa</div>
+                            <div>Alla Tanunina</div>
                             <div>info@forum-wbk.de</div>
-                            <div>+4915737264373</div>
-
                         </div>
                     </div>
                 </div>
@@ -31,101 +28,113 @@
                     >
                         <v-text-field
                             color="teal"
-                            v-model="name"
+                            v-model="nameText"
                             :rules="nameRules"
-                            label="Name"
+                            :label="name"
                             required
                         ></v-text-field>
 
-                            <v-text-field
-                                color="teal"
-                                v-model="email"
-                                :rules="emailRules"
-                                label="E-mail"
-                                required
-                            ></v-text-field>
+                        <v-text-field
+                            color="teal"
+                            v-model="emailText"
+                            :rules="emailRules"
+                            :label="email"
+                            required
+                        ></v-text-field>
 
-                                <v-text-field
-                                    color="teal"
-                                    v-model="phone"
-                                    :rules="phoneRules"
-                                    label="Phone number"
-                                    required
-                                ></v-text-field>
+                        <v-text-field
+                            color="teal"
+                            v-model="phoneText"
+                            :rules="phoneRules"
+                            :label="phone"
+                            required
+                        ></v-text-field>
 
-                                    <v-select class="dropdown"
-                                        v-if="formType==='curses'"
-                                        color="teal"
-                                        v-model="select"
-                                        :items="items"
-                                        :rules="[v => !!v || 'Item is required']"
-                                        label="Item"
-                                        required
-                                    ></v-select>
+                        <v-select
+                            class="dropdown"
+                            v-if="formType === 'curses'"
+                            color="teal"
+                            v-model="select"
+                            :items="items"
+                            :rules="[v => !!v || 'Item is required']"
+                            label="Item"
+                            required
+                        ></v-select>
 
-                                        <v-textarea
-                                            v-model="message"
-                                            color="teal"
-                                        >
-                                            <template v-slot:label>
-                                                <div>
-                                                    Message
-                                                    <small>(optional)</small>
-                                                </div>
-                                            </template>
-                                            </v-textarea>
+                        <v-textarea v-model="messageText" color="teal">
+                            <template v-slot:label>
+                                <div>
+                                    {{ message }}
+                                    <small>({{ optional }})</small>
+                                </div>
+                            </template>
+                        </v-textarea>
 
-                                            <!-- <v-checkbox
+                        <!-- <v-checkbox
                                                 v-model="checkbox"
                                                 :rules="[v => !!v || 'You must agree to continue!']"
                                                 label="Do you agree?"
                                                 required
                                             ></v-checkbox> -->
 
-                                                <v-btn
-                                                    depressed
-                                                    tile
-                                                    :disabled="!valid"
-                                                    class="mr-4 button"
-                                                    @click="validate"
-                                                >
-                                                    Send Request
-                                                    </v-btn>
-                                                    </v-form>
-
+                        <v-btn
+                            depressed
+                            tile
+                            :disabled="!valid"
+                            class="mr-4 button"
+                            @click="sendEmail"
+                        >
+                            {{ send }}
+                        </v-btn>
+                    </v-form>
                 </div>
-
             </div>
         </v-container>
-        <img
-            class="dots"
-            :src="require(`../assets/dots.png`)"
-            alt=""
-        >
-
-            </v-container>
+        <img class="dots" :src="require(`../assets/dots.png`)" alt="" />
+    </v-container>
 </template>
 
 <script>
+import { mapActions, mapGetters } from 'vuex';
+import axios from 'axios';
 export default {
     name: 'Formular',
     props: ['title', 'formType'],
     data: () => ({
         valid: true,
-        name: '',
+        nameText: '',
+        emailText: '',
+        phoneText: '',
         nameRules: [v => !!v || 'Name is required'],
-        email: '',
         emailRules: [
             v => !!v || 'E-mail is required',
-            v => /.+@.+\..+/.test(v) || 'E-mail must be valid',
+            v => /.+@.+\..+/.test(v) || 'E-mail must be valid'
         ],
-        phone: '',
         phoneRules: [v => !!v || 'Phone id required'],
         select: null,
-        items: ["English (Children Group)", "English (Teenagers Group)", "German (Children Group)", "German (Teenagers Group)", "German (Parents Group)", "Drawing" ],
+        items: [
+            'English (Children Group)',
+            'English (Teenagers Group)',
+            'German (Children Group)',
+            'German (Teenagers Group)',
+            'German (Parents Group)',
+            'Drawing'
+        ],
         checkbox: false,
-        message: '',
+        messageText: ''
     }),
+    computed: {
+        ...mapGetters([
+            'email',
+            'phone',
+            'name',
+            'message',
+            'optional',
+            'send',
+            'formSubtitle',
+            'formTitle'
+        ])
+    },
 
     methods: {
         validate() {
@@ -137,7 +146,25 @@ export default {
         resetValidation() {
             this.$refs.form.resetValidation();
         },
-    },
+        sendEmail(e) {
+            try {
+                const data = {
+                    fromName: this.nameText,
+                    fromEmail: this.emailText,
+                    message: this.messageText,
+                    fromPhone: this.phoneText
+                };
+                console.log(data);
+                axios.post('/sendemail', data);
+            } catch (error) {
+                console.log({ error });
+            }
+            // Reset form field
+            this.name = '';
+            this.email = '';
+            this.message = '';
+        }
+    }
 };
 </script>
 
@@ -169,7 +196,7 @@ img {
     left: 47%;
     z-index: 1;
 }
-.dropdown{
+.dropdown {
     z-index: 99999;
 }
 </style>

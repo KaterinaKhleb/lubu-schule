@@ -2,13 +2,13 @@
     <v-container fluid fill-height class="camp-home" style="max-height: 100vh;">
         <v-layout justify-center align-center column pa-5>
             <div class="title-camp-home white--text text-xs-center">
-                SOMMERCAMP
+                {{campName}}
             </div>
             <div class="d-flex"><v-icon color="white">mdi-map-marker</v-icon>
             <span  class="white--text">Aschenhütte, Bad Herrenalb   </span></div>
             
             <div class=" subtitle-camp font-weight-bold white--text text-xs-center">
-                Advanture, Learning, fun and games! 
+                {{campMotto}}
             </div>
 
         </v-layout>
@@ -16,8 +16,14 @@
 </template>
 
 <script>
+import {mapActions, mapGetters} from "vuex";
 export default {
     name: 'HomeScreen',
+
+    computed: {
+        ...mapGetters(["campName", "campMotto"])
+    },
+
 };
 </script>
 
