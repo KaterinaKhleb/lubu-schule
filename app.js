@@ -12,7 +12,7 @@ const transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     auth: {
         user: 'katerinushka2603@gmail.com',
-        pass: 'Pillow17031997',
+        pass: 'Pillow26031998',
     },
     secure: true,
 });
@@ -26,15 +26,15 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/sendemail', (req, res) => {
-    console.log(req.body)
     const from = "katerinushka2603@gmail.com";
     const text = req.body.message;
-    const name = req.body.name;
+    const name = req.body.fromName;
+    const phone = req.body.fromPhone;
     const mailData = {
-        from: from, // sender address
-        to: 'katerinushka2603@gmail.com', // list of receivers
+        from: from,
+        to: 'katerinushka2603@gmail.com',
         subject: 'Registration for summer camp',
-        text: `Name: ${name}, message: ${text}`
+        text: `NEW SOMMER CAMP REGISTRATION REQUEST. Name: ${name}, Phoone: ${phone}, Message: ${text}`
     };
     transporter.sendMail(mailData, function(err, info) {
         if (err)

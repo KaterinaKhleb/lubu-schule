@@ -91,6 +91,10 @@
             </div>
         </v-container>
         <img class="dots" :src="require(`../assets/dots.png`)" alt="" />
+        <v-alert 
+            type="success"
+            v-model="successRequest"
+            >Request successfully sent</v-alert>
     </v-container>
 </template>
 
@@ -104,6 +108,7 @@ export default {
         valid: true,
         nameText: '',
         emailText: '',
+        successRequest: false,
         phoneText: '',
         nameRules: [v => !!v || 'Name is required'],
         emailRules: [
@@ -147,6 +152,7 @@ export default {
             this.$refs.form.resetValidation();
         },
         sendEmail(e) {
+            validate()
             try {
                 const data = {
                     fromName: this.nameText,
@@ -154,7 +160,6 @@ export default {
                     message: this.messageText,
                     fromPhone: this.phoneText
                 };
-                console.log(data);
                 axios.post('/sendemail', data);
             } catch (error) {
                 console.log({ error });
@@ -163,6 +168,10 @@ export default {
             this.name = '';
             this.email = '';
             this.message = '';
+            this.successRequest = true;
+            setTimeout(() => {
+                this.successRequest = true;
+                }, "3000")
         }
     }
 };
