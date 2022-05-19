@@ -31,6 +31,7 @@
                                     class="button button-camp-desc mt-5 px-8 py-6"
                                     depressed
                                     tile
+                                     @click="scrollMeTo('registerForm')" 
                                 >{{registerNow}}</v-btn>
 
                             </v-container>
@@ -70,6 +71,7 @@
 
 <script>
 import {mapActions, mapGetters} from "vuex";
+import { METHODS } from 'http';
 
 export default {
     name: 'CampDescription',
@@ -107,7 +109,15 @@ export default {
             ]
         }
 
+    },
+    methods:{
+          scrollMeTo(refName) {
+            const element = document.getElementById(refName);
+            const top = element.offsetTop;
+            window.scrollTo(0, top);
+        },
     }
+  
 }
 </script>
 
