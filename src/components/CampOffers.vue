@@ -34,17 +34,18 @@
                                             {{item.text}}
                                         </v-card-subtitle>
                                         </v-card>
-                                        <img
-                                            class="sitting-illustration"
-                                            :src="require(`../assets/sitting_illustration.png`)"
-                                            alt=""
-                                        >
+                                      
                             </div>
                         </template>
                         </v-col>
                 </v-row>
             </v-layout>
         </v-container>
+          <img
+                                            class="sitting-illustration"
+                                            :src="require(`../assets/sitting_illustration.png`)"
+                                            alt=""
+                                        >
         </v-container>
 </template>
 
@@ -99,6 +100,7 @@ export default {
 <style scoped>
 .camp-activ-holder {
     background-color: #f6f7f8;
+    position: relative;
 }
 
 .offer-background {
@@ -122,6 +124,7 @@ export default {
 }
 .flexbox {
     display: flex !important;
+    position: relative;
     width: 100%;
     flex-wrap: wrap !important;
 }
@@ -139,7 +142,7 @@ export default {
     height: auto;
     position: absolute;
     right: 0;
-    bottom: 80vh;
+    bottom: 5%
 }
 /* Tablet horiz to vertical
 ===============================*/
@@ -153,9 +156,7 @@ export default {
 .title-actiivity{
     font-size: 2.8rem;
 }
-.sitting-illustration {
-  display: none
-}
+
 }
 
 /* Mobile to Tablet Portrait
