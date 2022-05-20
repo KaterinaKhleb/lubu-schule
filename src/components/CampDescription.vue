@@ -8,8 +8,8 @@
                 <v-row no-gutters>
                     <v-col
                         cols="12"
-                        sm="6"
                         md="8"
+                        sm="6"
                     >
                         <v-card
                             tile
@@ -24,11 +24,11 @@
                             <v-container class="mt-3">
                                 <div class="info-text">{{camDescPartOne}}   </div>
                                 <br><br>
-                                <div class="info-text">{{campDescription}}    </div><br><br>
+                                <div class="info-text mb-3">{{campDescription}}    </div><br><br>
                                 <!-- <div class="info-text">To book the place, simply contact us on 017654345767 or register using the form below.</div> -->
 
                                 <v-btn
-                                    class="button button-camp-desc mt-5 px-8 py-6"
+                                    class="button button-camp-desc mt-7 px-8 py-6"
                                     depressed
                                     tile
                                      @click="scrollMeTo('registerForm')" 
@@ -39,8 +39,9 @@
                             </v-card>
                             </v-col>
                             <v-col
-                                cols="6"
+                                cols="12"
                                 md="4"
+                                sm="6"
                             >
                                 <v-card
                                     outlined
@@ -146,5 +147,34 @@ export default {
 }
 .info-text {
     width: 90%;
+}
+
+
+/* Tablet horiz to vertical
+===============================*/
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+}
+
+/* Horiz Tablet to Desktop
+===============================*/
+@media (min-width: 768px) and (max-width: 1023px) {
+.title-camp-desc {
+    font-size: 2.8rem;
+}
+}
+
+/* Mobile to Tablet Portrait
+===============================*/
+@media (min-width: 480px) and (max-width: 767px) {
+.title-camp-desc {
+    font-size: 2rem;
+}
+}
+
+@media (max-width: 480px) {
+  .title-camp-desc {
+    font-size: 1.5rem;
+}
 }
 </style>

@@ -1,12 +1,12 @@
 <template>
-    <span>
         <v-app-bar
+        class="nav"
             fixed
             color="#456769"
             dark
         >
             <v-spacer class="hidden-md-and-up"></v-spacer>
-            <router-link to="/">
+            <router-link class="mr-3" to="/">
                 <span class="title">KIT School</span>
             </router-link>
                     <v-spacer class="hidden-sm-and-down"></v-spacer>
@@ -25,11 +25,11 @@
                     dark
                     outlined
                     tile
-                    class="hidden-sm-and-down mr-12 nav-menu"
+                    class="mr-6 nav-menu "
                     to="/sommercamp"
                     data-cy="menuBtn"
                 >Summer Camp</v-btn>
-                    <v-col cols="1">
+                    <v-col class="lang-selector" cols="1">
                         <v-select
                             v-model="selectedLanguage"
                             :items="langs"
@@ -41,7 +41,7 @@
                     </v-col>
 
                         </v-app-bar>
-    </span>
+  
 </template>
 
 <script>
@@ -74,5 +74,40 @@ a {
     border: none !important;
     border-bottom: 1px solid white !important;
 
+}
+/* Tablet horiz to vertical
+===============================*/
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+}
+
+/* Horiz Tablet to Desktop
+===============================*/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Mobile to Tablet Portrait
+===============================*/
+@media (min-width: 480px) and (max-width: 767px) {
+.lang-selector{
+    flex: 0 0 25% !important;
+    max-width: 25 !important
+}
+.nav{
+    display: flex;
+    flex-direction: row
+}
+}
+
+@media (max-width: 480px) {
+  .lang-selector{
+    flex: auto !important;
+    max-width: unset !important ;
+  }
+.nav{
+    display: flex;
+    flex-direction: row
+}
 }
 </style>

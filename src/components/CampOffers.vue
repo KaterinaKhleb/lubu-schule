@@ -9,7 +9,6 @@
                 <v-row no-gutters>
                     <v-col
                         cols="12"
-                        sm="6"
                         md="10"
                     >
                         <template>
@@ -40,7 +39,6 @@
                                             :src="require(`../assets/sitting_illustration.png`)"
                                             alt=""
                                         >
-
                             </div>
                         </template>
                         </v-col>
@@ -124,6 +122,7 @@ export default {
 }
 .flexbox {
     display: flex !important;
+    width: 100%;
     flex-wrap: wrap !important;
 }
 .card-item {
@@ -140,6 +139,46 @@ export default {
     height: auto;
     position: absolute;
     right: 0;
-    top: 56%;
+    bottom: 80vh;
+}
+/* Tablet horiz to vertical
+===============================*/
+@media (min-width: 1024px) and (max-width: 1280px) {
+
+}
+
+/* Horiz Tablet to Desktop
+===============================*/
+@media (min-width: 768px) and (max-width: 1023px) {
+.title-actiivity{
+    font-size: 2.8rem;
+}
+.sitting-illustration {
+  display: none
+}
+}
+
+/* Mobile to Tablet Portrait
+===============================*/
+@media (min-width: 480px) and (max-width: 767px) {
+.title-actiivity {
+    font-size: 2rem;
+}
+.sitting-illustration {
+  display: none
+}
+}
+
+@media (max-width: 480px) {
+  .title-actiivity {
+    font-size: 1rem;
+}
+.flexbox {
+    display: block !important;
+    width: 100%;
+}
+.sitting-illustration {
+  display: none
+}
 }
 </style>
