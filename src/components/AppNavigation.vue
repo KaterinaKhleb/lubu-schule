@@ -5,8 +5,7 @@
             color="#456769"
             dark
         >
-            <v-spacer class="hidden-md-and-up"></v-spacer>
-            <router-link class="mr-3" to="/">
+            <router-link  class="hidden-sm-and-down mr-3" to="/">
                 <span class="title">KIT School</span>
             </router-link>
                     <v-spacer class="hidden-sm-and-down"></v-spacer>
@@ -73,8 +72,11 @@ a {
 .nav-menu{
     border: none !important;
     border-bottom: 1px solid white !important;
-
 }
+  .lang-selector{
+    max-width: unset !important ;
+    width: 30%;
+  }
 /* Tablet horiz to vertical
 ===============================*/
 @media (min-width: 1024px) and (max-width: 1280px) {
@@ -84,19 +86,38 @@ a {
 /* Horiz Tablet to Desktop
 ===============================*/
 @media (min-width: 768px) and (max-width: 1023px) {
-
+  .lang-selector{
+    max-width: unset !important ;
+    width: 30%;
+  }
+.nav{
+    display: flex;
+       justify-content: space-between;
+    width: 100%;
+    flex-direction: row
+}
+/deep/.v-toolbar__content{
+    width: 100%!important;
+    justify-content: space-between !important;
+}
 }
 
 /* Mobile to Tablet Portrait
 ===============================*/
 @media (min-width: 480px) and (max-width: 767px) {
-.lang-selector{
-    flex: 0 0 25% !important;
-    max-width: 25 !important
-}
+  .lang-selector{
+    max-width: unset !important ;
+    width: 30%;
+  }
 .nav{
     display: flex;
+       justify-content: space-between;
+    width: 100%;
     flex-direction: row
+}
+/deep/.v-toolbar__content{
+    width: 100%!important;
+    justify-content: space-between !important;
 }
 }
 
@@ -104,10 +125,15 @@ a {
   .lang-selector{
     flex: auto !important;
     max-width: unset !important ;
+    width: 30%;
   }
 .nav{
     display: flex;
     flex-direction: row
+}
+/deep/.v-toolbar__content{
+    width: 100% !important;
+    justify-content: space-between !important;
 }
 }
 </style>
