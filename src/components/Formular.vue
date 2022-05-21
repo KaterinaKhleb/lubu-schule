@@ -152,7 +152,6 @@ export default {
             this.$refs.form.resetValidation();
         },
         sendEmail(e) {
-            validate()
             try {
                 const data = {
                     fromName: this.nameText,
