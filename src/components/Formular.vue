@@ -11,10 +11,9 @@
                     <div class="formular-title text-form">{{ formTitle }}</div>
                     <div class="text-form mt-8 mr-8">{{ formSubtitle }}</div>
                     <div class="d-flex mt-12 mx-auto mb-3">
-                        <img :src="require(`../assets/frau.png`)" />
                         <div class="d-flex text-form mt-4 ml-5 flex-column">
-                            <div>Alla Tanunina</div>
                             <div>info@forum-wbk.de</div>
+                            <div>Telegtamm: <a href="https://t.me/+7pzjhBIQFWcwOTNi">Our channel</a> </div>
                         </div>
                     </div>
                 </div>
@@ -208,6 +207,9 @@ img {
 }
 .dropdown {
     z-index: 99999;
+}
+a{
+    color: white !important
 }
 /* Tablet horiz to vertical
 ===============================*/
