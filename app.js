@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const serveStatic = require("serve-static");
+const serveStatic = require('serve-static');
 const cors = require('cors');
 const path = require('path');
 const nodemailer = require('nodemailer');
@@ -11,12 +11,12 @@ const EMAIL_PASS = process.env.EMAIL_PASS;
 
 const transporter = nodemailer.createTransport({
     port: 465,
-    host: "smtp.gmail.com",
+    host: 'smtp.gmail.com',
     auth: {
         user: EMAIL,
-        pass: EMAIL_PASS,
+        pass: EMAIL_PASS
     },
-    secure: true,
+    secure: true
 });
 
 app.use(serveStatic(path.join(__dirname, 'dist')));
@@ -37,10 +37,8 @@ app.post('/sendemail', (req, res) => {
         text: `NEW SOMMER CAMP REGISTRATION REQUEST. Name: ${name}, Phoone: ${phone}, Message: ${text}`
     };
     transporter.sendMail(mailData, function(err, info) {
-        if (err)
-            console.log(err)
-        else
-            console.log(info);
+        if (err) console.log(err);
+        else console.log(info);
     });
 });
 

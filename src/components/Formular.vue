@@ -13,8 +13,9 @@
                     <div class="d-flex mt-12 mx-auto mb-3">
                         <div class="d-flex text-form mt-4 ml-5 flex-column">
                             <div>info@forum-wbk.de</div>
+                            <div>WhatsApp: +49 157 372 64 373</div>
                             <div>
-                                Telegtamm:
+                                Telegramm:
                                 <a href="https://t.me/+7pzjhBIQFWcwOTNi"
                                     >Our channel</a
                                 >
@@ -100,7 +101,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
+import {  mapGetters } from 'vuex';
 import axios from 'axios';
 export default {
     name: 'Formular',
@@ -139,7 +140,8 @@ export default {
             'send',
             'formSubtitle',
             'formTitle',
-            'success'
+            'success',
+            'ourChannelCamp'
         ])
     },
 
@@ -153,7 +155,7 @@ export default {
         resetValidation() {
             this.$refs.form.resetValidation();
         },
-        sendEmail(e) {
+        sendEmail() {
             try {
                 const data = {
                     fromName: this.nameText,

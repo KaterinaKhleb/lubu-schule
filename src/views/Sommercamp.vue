@@ -1,11 +1,9 @@
-
 <template>
     <div>
         <camp-home></camp-home>
         <CampDescription class="pt-8"></CampDescription>
         <CampOffers class="pt-8"></CampOffers>
         <Formular title="Sommer Camp " formType="camp"></Formular>
-
     </div>
 </template>
 
@@ -26,5 +24,4 @@ export default {
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

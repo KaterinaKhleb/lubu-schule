@@ -3,26 +3,25 @@
         <app-navigation></app-navigation>
         <v-content transition="slide-x-transition">
             <router-view></router-view>
-                    <app-footer></app-footer>
+            <!-- <app-footer></app-footer> -->
         </v-content>
-
     </v-app>
 </template>
 
 <script>
 import AppNavigation from '@/components/AppNavigation';
 import AppFooter from '@/components/AppFooter';
-import {mapActions, mapGetters} from "vuex";
+import { mapActions, mapGetters } from 'vuex';
 
 export default {
     name: 'App',
     components: {
         AppNavigation,
-        AppFooter,
+        AppFooter
     },
 
     data: () => ({
-        icons: ['mdi-facebook', 'mdi-twitter', 'mdi-linkedin', 'mdi-instagram'],
+        icons: ['mdi-facebook', 'mdi-twitter', 'mdi-linkedin', 'mdi-instagram']
     }),
 
     computed: {
@@ -30,16 +29,15 @@ export default {
     },
 
     methods: {
-      ...mapActions(["getContent"])  
+        ...mapActions(['getContent'])
     },
 
-    mounted: function () {
-        this.getContent('de')
-}
+    mounted: function() {
+        this.getContent('de');
+    }
 };
 </script>
 
 <style>
- @import './main.css';
-
- </style>
+@import './main.css';
+</style>

@@ -3,8 +3,6 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Sommercamp from './views/Sommercamp.vue';
 
-import store from '@/store.js';
-
 Vue.use(Router);
 
 const router = new Router({
@@ -24,10 +22,8 @@ const router = new Router({
             path: '/',
             name: 'sommercamp',
             component: Sommercamp
-        },
-
+        }
     ]
 });
-
 
 export default router;

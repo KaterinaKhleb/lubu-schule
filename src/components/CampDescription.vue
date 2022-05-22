@@ -59,8 +59,7 @@
 </template>
 
 <script>
-import { mapActions, mapGetters } from 'vuex';
-import { METHODS } from 'http';
+import { mapGetters } from 'vuex';
 
 export default {
     name: 'CampDescription',
