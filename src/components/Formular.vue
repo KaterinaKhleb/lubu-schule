@@ -13,7 +13,12 @@
                     <div class="d-flex mt-12 mx-auto mb-3">
                         <div class="d-flex text-form mt-4 ml-5 flex-column">
                             <div>info@forum-wbk.de</div>
-                            <div>Telegtamm: <a href="https://t.me/+7pzjhBIQFWcwOTNi">Our channel</a> </div>
+                            <div>
+                                Telegtamm:
+                                <a href="https://t.me/+7pzjhBIQFWcwOTNi"
+                                    >Our channel</a
+                                >
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -90,10 +95,7 @@
             </div>
         </v-container>
         <img class="dots" :src="require(`../assets/dots.png`)" alt="" />
-        <v-alert 
-            type="success"
-            v-model="successRequest"
-            >{{success}}</v-alert>
+        <v-alert type="success" v-model="successRequest">{{ success }}</v-alert>
     </v-container>
 </template>
 
@@ -137,7 +139,7 @@ export default {
             'send',
             'formSubtitle',
             'formTitle',
-            "success"
+            'success'
         ])
     },
 
@@ -170,7 +172,7 @@ export default {
             this.successRequest = true;
             setTimeout(() => {
                 this.successRequest = true;
-                }, "3000")
+            }, '3000');
         }
     }
 };
@@ -207,56 +209,55 @@ img {
 .dropdown {
     z-index: 99999;
 }
-a{
-    color: white !important
+a {
+    color: white !important;
 }
 /* Tablet horiz to vertical
 ===============================*/
 @media (min-width: 1024px) and (max-width: 1280px) {
-
 }
 
 /* Horiz Tablet to Desktop
 ===============================*/
 @media (min-width: 768px) and (max-width: 1023px) {
-.formular-title{
-    font-size: 2.8rem;
-}
-.width-50{
-    width: 100%
-}
-.formular-holder{
-    flex-direction: column;
-}
+    .formular-title {
+        font-size: 2.8rem;
+    }
+    .width-50 {
+        width: 100%;
+    }
+    .formular-holder {
+        flex-direction: column;
+    }
 }
 
 /* Mobile to Tablet Portrait
 ===============================*/
 @media (min-width: 480px) and (max-width: 767px) {
-.formular-title {
-    font-size: 2rem;
-}
-.width-50{
-    width: 100%
-}
-.formular-holder{
-    flex-direction: column;
-}
+    .formular-title {
+        font-size: 2rem;
+    }
+    .width-50 {
+        width: 100%;
+    }
+    .formular-holder {
+        flex-direction: column;
+    }
 }
 
 @media (max-width: 480px) {
-  .formular-title {
-    font-size: 1.5rem;
-}
-.flexbox {
-    display: block !important;
-    width: 100%;
-}
-.width-50{
-    width: 100%
-}
-.formular-holder{
-    flex-direction: column;
-}
+    .formular-title {
+        font-size: 1.5rem;
+    }
+    .flexbox {
+        display: block !important;
+        width: 100%;
+    }
+    .width-50 {
+        width: 100%;
+    }
+    .formular-holder {
+        flex-direction: column;
+    }
 }
 </style>

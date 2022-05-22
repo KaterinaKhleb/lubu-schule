@@ -50,13 +50,11 @@ export default {
 /* Tablet horiz to vertical
 ===============================*/
 @media (min-width: 1024px) and (max-width: 1280px) {
-
 }
 
 /* Horiz Tablet to Desktop
 ===============================*/
 @media (min-width: 768px) and (max-width: 1023px) {
-
 }
 
 /* Mobile to Tablet Portrait
@@ -66,12 +64,12 @@ export default {
         font-weight: 900;
         font-size: 2rem;
     }
-        .subtitle-camp {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 2rem;
-    line-height: 2rem;
-}
+    .subtitle-camp {
+        font-style: normal;
+        font-weight: 500;
+        font-size: 2rem;
+        line-height: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -80,10 +78,10 @@ export default {
         font-size: 2rem;
     }
     .subtitle-camp {
-    font-style: normal;
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-}
+        font-style: normal;
+        font-weight: 500;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
 }
 </style>

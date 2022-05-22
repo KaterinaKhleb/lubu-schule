@@ -9,20 +9,21 @@
             >
                 FOR EVERYONE
             </div>
-            <div class="d-flex"><v-icon color="white">mdi-map-marker</v-icon>
-            <span  class="white--text">Ludwigsburg</span></div>
-            
+            <div class="d-flex">
+                <v-icon color="white">mdi-map-marker</v-icon>
+                <span class="white--text">Ludwigsburg</span>
+            </div>
+
             <div class="display-1 font-weight-bold white--text text-xs-center">
                 We are there for you
             </div>
-
         </v-layout>
     </v-container>
 </template>
 
 <script>
 export default {
-    name: 'HomeScreen',
+    name: 'HomeScreen'
 };
 </script>
 
