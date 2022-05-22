@@ -4,11 +4,10 @@ const serveStatic = require("serve-static");
 const cors = require('cors');
 const path = require('path');
 const nodemailer = require('nodemailer');
-require('dotenv').config()
-
+require('dotenv').config();
 const app = express();
-const EMAIL = env.process.EMAIL;
-const EMAIL_PASS = env.process.EMAIL_PASS;
+const EMAIL = process.env.EMAIL;
+const EMAIL_PASS = process.env.EMAIL_PASS;
 
 const transporter = nodemailer.createTransport({
     port: 465,
