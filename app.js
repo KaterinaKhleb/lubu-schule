@@ -4,20 +4,21 @@ const serveStatic = require("serve-static");
 const cors = require('cors');
 const path = require('path');
 const nodemailer = require('nodemailer');
+require('dotenv').config()
 
 const app = express();
+const EMAIL = env.process.EMAIL;
+const EMAIL_PASS = env.process.EMAIL_PASS;
 
 const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
     auth: {
-        user: 'katerinushka2603@gmail.com',
-        pass: 'Pillow26031998',
+        user: EMAIL,
+        pass: EMAIL_PASS,
     },
     secure: true,
 });
-
-
 
 app.use(serveStatic(path.join(__dirname, 'dist')));
 
@@ -26,13 +27,13 @@ app.use(bodyParser.json());
 app.use(cors());
 
 app.post('/sendemail', (req, res) => {
-    const from = "katerinushka2603@gmail.com";
+    const from = EMAIL;
     const text = req.body.message;
     const name = req.body.fromName;
     const phone = req.body.fromPhone;
     const mailData = {
         from: from,
-        to: 'katerinushka2603@gmail.com',
+        to: EMAIL,
         subject: 'Registration for summer camp',
         text: `NEW SOMMER CAMP REGISTRATION REQUEST. Name: ${name}, Phoone: ${phone}, Message: ${text}`
     };
