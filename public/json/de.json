@@ -1,6 +1,6 @@
 {
     "campName": "Sommercamp",
-    "campMotto": " Abenteuer, Lernen, Spaß und Nature! ",
+    "campMotto": " Abenteuer, Lernen, Spaß und Natur! ",
     "campSubname": "Urlaub im Schwarzwald!",
     "camDescPartOne": "Unter dem Motto Abenteuer, Lernen, Spiel und Spaß hat sich das Projekt „Sommercamp“ des Vereines FWBK (Internationales Forum für Wissenschaft, Bildung und Kultur e.V.)  zur Aufgabe gemacht Kindern und Jugendlichen verschiedener Nationalitäten, Religionen und Kulturen aktiv und spielend Englisch beizubringen.",
     "campDescription": "Es handelt sich hierbei nicht um einen klassischen Sprachkurs – nein, es sind sieben Tage voller spannender Aktivitäten, ein Englischkurs auf spielerische Art. Englisch lernen gepaart mit Kreativworkshops, aber auch der Umgang und das Leben in der Natur wird durch beispielsweise einer Waldwanderung gefördert. Ebenso kommen Sport und Abenteuer nicht zu kurz beim Sommercamp- die teilnehmenden Kinder stärken so ihr Verständnis und ihre Toleranz für andere Kulturen, indem sie gemeinsam Stockbrot am Lagerfeuer machen, oder Fußball und Tischtennis spielen. ",
@@ -16,7 +16,11 @@
     "activity5Name": "Camping Erinnerungen",
     "activity5Desc": "Der Geruch von Feuer, Gitaren-Lieder, frische Luft und der Gesang von Grillen - das sind die schönsten Kindheitserinnerungen die wir zusammen erleben werden!",
     "formTitle": "Bitte das Formular ausfüllen oder uns per Email kontaktieren ",
-    "formSubtitle": "Falls Sie noch Fragen Haben, bitte uns eine Nachricht schreiben oder in sozial Medien uns kontaktieren.",
+    "registration": "Anmeldung",
+    "registrTextPart1": "Um sich für das Sommercamp anzumelden, füllen Sie bitte ",
+    "formLink": "das folgende Formular",
+    "registrTextPart2": "aus und senden Sie es an diese Adresse: info@forum-wbk.de.",
+    "formSubtitle": "Falls Sie weitere Fragen haben, können Sie uns gerne per Email oder über Sozial Media kontaktieren.",
     "where": "Wo",
     "when": "Wann",
     "ageGroup": "Alter",
@@ -30,7 +34,7 @@
     "message": "Nachricht",
     "optional": "optional",
     "send": "Schicken",
-    "registerNow": "Jetzt sich anmelden",
+    "registerNow": "Jetzt anmelden",
     "success": "die Anfrage wurde verschickt.",
     "ourChannelCamp": "unser Kanal"
 }

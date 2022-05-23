@@ -40,7 +40,11 @@ export default new Vuex.Store({
         langs: '',
         registerNow: '',
         success: '',
-        ourChannelCamp: ''
+        ourChannelCamp: '',
+        registration: '',
+        registrTextPart1: '',
+        formLink: '',
+        registrTextPart2: ''
     },
     mutations: {
         setLanguage(state, lan) {
@@ -48,7 +52,9 @@ export default new Vuex.Store({
         }
     },
     actions: {
-        async getContent({ state }, lang) {
+        async getContent({
+            state
+        }, lang) {
             const data = await axios.get(`/json/${lang}.json`);
             const c = data.data;
             (state.campName = c.campName),
@@ -85,6 +91,10 @@ export default new Vuex.Store({
             (state.registerNow = c.registerNow),
             (state.success = c.success),
             (state.ourChannelCamp = c.ourChannelCamp);
+            (state.registration = c.registration),
+            (state.registrTextPart1 = c.registrTextPart1),
+            (state.formLink = c.formLink),
+            (state.registrTextPart2 = c.registrTextPart2),
             this.commit('setLanguage', lang);
             //get content here
         }
@@ -125,6 +135,10 @@ export default new Vuex.Store({
         langs: state => state.langs,
         registerNow: state => state.registerNow,
         success: state => state.success,
-        ourChannelCamp: state => state.ourChannelCamp
+        ourChannelCamp: state => state.ourChannelCamp,
+        registration: state => state.registration,
+        registrTextPart1: state => state.registrTextPart1,
+        formLink: state => state.formLink,
+        registrTextPart2: state => state.registrTextPart2,
     }
 });

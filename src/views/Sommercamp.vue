@@ -3,7 +3,7 @@
         <camp-home></camp-home>
         <CampDescription class="pt-8"></CampDescription>
         <CampOffers class="pt-8"></CampOffers>
-        <Formular title="Sommer Camp " formType="camp"></Formular>
+        <Registration title="Sommer Camp " formType="camp"></Registration>
     </div>
 </template>
 
@@ -11,7 +11,7 @@
 import CampHome from '@/components/CampHome';
 import CampDescription from '@/components/CampDescription';
 import CampOffers from '@/components/CampOffers';
-import Formular from '@/components/Formular';
+import Registration from '@/components/RegistrationCamp';
 
 export default {
     name: 'Menu',
@@ -19,7 +19,7 @@ export default {
         CampDescription,
         CampHome,
         CampOffers,
-        Formular
+        Registration
     }
 };
 </script>
