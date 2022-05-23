@@ -27,6 +27,7 @@ app.use(cors());
 
 app.post('/sendemail', (req, res) => {
     const from = EMAIL;
+    const email = req.body.fromEmail;
     const text = req.body.message;
     const name = req.body.fromName;
     const phone = req.body.fromPhone;
@@ -34,7 +35,7 @@ app.post('/sendemail', (req, res) => {
         from: from,
         to: EMAIL,
         subject: 'Registration for summer camp',
-        text: `NEW SOMMER CAMP REGISTRATION REQUEST. Name: ${name}, Phoone: ${phone}, Message: ${text}`
+        text: `NEW SOMMER CAMP REGISTRATION REQUEST. Name: ${name}, Email: ${email} Phone: ${phone}, Message: ${text}`
     };
     transporter.sendMail(mailData, function(err, info) {
         if (err) console.log(err);
