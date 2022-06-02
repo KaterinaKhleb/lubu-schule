@@ -137,6 +137,8 @@ export default {
 }
 .man-standing {
     position: absolute;
+    height: 200px;
+    width: auto;
     left: 100px;
     bottom: 30px;
 }
