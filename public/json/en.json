@@ -37,6 +37,15 @@
     "send": "Send request",
     "registerNow": "Register now",
     "success": "The Request is successfully sent",
-    "ourChannelCamp": "Our Channel"
+    "ourChannelCamp": "Our Channel",
+    "engClass": "English",
+    "engDesc": "English lessons are divided into two age groups - children (5-10 y.o.) and teenagers(11 - 16 y.o.). The level of the language depends on the group and varies from A1 to B2.",
+    "groups": "Groups",
+    "groupNamesEng": "Children, Teens",
+    "engSchedules": { "Children": "10:00 - 10:45", "Teens": "11:00 - 11:45" },
+    "germanClass": "German",
+    "germanDesc": "English lessons are divided into two age groups - children (5-10 y.o.) and teenagers(11 - 16 y.o.). The level of the language depends on the group and varies from A1 to B2.",
+    "groupNamesGerman": "Children, Teens, Parents",
+    "germanSchedules": { "Teens": "10:00 - 10:45", "Children": "11:00 - 11:45", "Parents": "10:00 - 11:45" }
 
 }

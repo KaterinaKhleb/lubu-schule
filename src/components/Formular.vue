@@ -2,109 +2,39 @@
     <v-container
         id="registerForm"
         fluid
-        class="form-main pt-10 pb-12"
+        class="form-main pt-10 pb-12 "
         grid-list-lg
     >
-        <v-container grid-list-lg>
-            <div class="d-flex formular-holder">
-                <div class="width-50 ">
-                    <div class="formular-title text-form">{{ formTitle }}</div>
-                    <div class="text-form mt-8 mr-8">{{ formSubtitle }}</div>
-                    <div class="d-flex mt-12 mx-auto mb-3">
-                        <div class="d-flex text-form mt-4 ml-5 flex-column">
-                            <div>info@forum-wbk.de</div>
-                            <div>WhatsApp: +49 157 372 64 373</div>
-                            <div>
-                                Telegramm:
-                                <a href="https://t.me/+7pzjhBIQFWcwOTNi"
-                                    >Our channel</a
-                                >
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="width-50">
-                    <v-form
-                        style="background:white"
-                        ref="form"
-                        class="pa-7 rounded"
-                        v-model="valid"
-                        lazy-validation
-                    >
-                        <v-text-field
-                            color="teal"
-                            v-model="nameText"
-                            :rules="nameRules"
-                            :label="name"
-                            required
-                        ></v-text-field>
-
-                        <v-text-field
-                            color="teal"
-                            v-model="emailText"
-                            :rules="emailRules"
-                            :label="email"
-                            required
-                        ></v-text-field>
-
-                        <v-text-field
-                            color="teal"
-                            v-model="phoneText"
-                            :rules="phoneRules"
-                            :label="phone"
-                            required
-                        ></v-text-field>
-
-                        <v-select
-                            class="dropdown"
-                            v-if="formType === 'curses'"
-                            color="teal"
-                            v-model="select"
-                            :items="items"
-                            :rules="[v => !!v || 'Item is required']"
-                            label="Item"
-                            required
-                        ></v-select>
-
-                        <v-textarea v-model="messageText" color="teal">
-                            <template v-slot:label>
-                                <div>
-                                    {{ message }}
-                                    <small>({{ optional }})</small>
-                                </div>
-                            </template>
-                        </v-textarea>
-
-                        <!-- <v-checkbox
-                                                v-model="checkbox"
-                                                :rules="[v => !!v || 'You must agree to continue!']"
-                                                label="Do you agree?"
-                                                required
-                                            ></v-checkbox> -->
-
-                        <v-btn
-                            depressed
-                            tile
-                            :disabled="!valid"
-                            class="mr-4 button"
-                            @click="sendEmail"
-                        >
-                            {{ send }}
-                        </v-btn>
-                    </v-form>
+        <v-container class="width-50" grid-list-lg>
+            <div class="formular-title">Регистрация</div>
+            <div class="text-form mt-8">
+                Для регистрации на наши занятия достаточно написать нам в нашем 
+                <a href="https://t.me/+7pzjhBIQFWcwOTNi" download>Телеграмм канале</a>
+                или написать на нашу электронную почту info@forum-wbk.de..
+            </div>
+            <div class="text-form mt-8  ">{{ formSubtitle }}</div>
+            <div class="d-flex text-form mt-8 mb-8 flex-column">
+                <div>Email: info@forum-wbk.de</div>
+                <div>
+                    Telegramm:
+                    <a href="https://t.me/+7pzjhBIQFWcwOTNi">Our channel</a>
                 </div>
             </div>
         </v-container>
-        <img class="dots" :src="require(`../assets/dots.png`)" alt="" />
-        <v-alert type="success" v-model="successRequest">{{ success }}</v-alert>
+        <img
+            class="man-standing"
+            :src="require(`../assets/standing-12.svg`)"
+            alt=""
+        />
+        <img class="vector" :src="require(`../assets/Vector.svg`)" alt="" />
     </v-container>
 </template>
 
 <script>
-import {  mapGetters } from 'vuex';
+import { mapGetters } from 'vuex';
 import axios from 'axios';
 export default {
-    name: 'Formular',
+    name: 'Registration',
     props: ['title', 'formType'],
     data: () => ({
         valid: true,
@@ -132,16 +62,12 @@ export default {
     }),
     computed: {
         ...mapGetters([
-            'email',
-            'phone',
-            'name',
-            'message',
-            'optional',
-            'send',
+            'registration',
+            'registrTextPart1',
+            'formLink',
+            'registrTextPart2',
             'formSubtitle',
-            'formTitle',
-            'success',
-            'ourChannelCamp'
+            'success'
         ])
     },
 
@@ -194,13 +120,24 @@ export default {
 .formular-title {
     font-size: 3rem;
     font-weight: 800;
+    color: white;
 }
 .text-form {
     color: white;
+    font-size: 1.5rem;
 }
-img {
-    height: 100px;
+
+.vector {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+}
+.man-standing {
+    position: absolute;
+    height: 200px;
     width: auto;
+    left: 100px;
+    bottom: 30px;
 }
 .dots {
     position: relative;
@@ -217,6 +154,12 @@ a {
 /* Tablet horiz to vertical
 ===============================*/
 @media (min-width: 1024px) and (max-width: 1280px) {
+        .vector {
+        display: none;
+    }
+    .man-standing {
+        display: none;
+    }   
 }
 
 /* Horiz Tablet to Desktop
@@ -231,6 +174,12 @@ a {
     .formular-holder {
         flex-direction: column;
     }
+        .vector {
+        display: none;
+    }
+    .man-standing {
+        display: none;
+    }
 }
 
 /* Mobile to Tablet Portrait
@@ -244,6 +193,12 @@ a {
     }
     .formular-holder {
         flex-direction: column;
+    }
+        .vector {
+        display: none;
+    }
+    .man-standing {
+        display: none;
     }
 }
 
@@ -260,6 +215,12 @@ a {
     }
     .formular-holder {
         flex-direction: column;
+    }
+    .vector {
+        display: none;
+    }
+    .man-standing {
+        display: none;
     }
 }
 </style>

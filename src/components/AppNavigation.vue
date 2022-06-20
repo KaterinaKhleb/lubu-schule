@@ -5,7 +5,7 @@
         </router-link>
         <v-spacer class="hidden-sm-and-down"></v-spacer>
 
-        <!-- <v-btn
+        <v-btn
                 depressed
                 dark
                 outlined
@@ -13,8 +13,8 @@
                 class="hidden-sm-and-down  mr-5 nav-menu"
                 to="/"
                 data-cy="menuBtn"
-            >Curses</v-btn> -->
-        <v-btn
+            >Curses</v-btn>
+        <!-- <v-btn
             depressed
             dark
             outlined
@@ -23,7 +23,7 @@
             to="/sommercamp"
             data-cy="menuBtn"
             >Summer Camp</v-btn
-        >
+        > -->
         <v-col class="lang-selector" cols="1">
             <v-select
                 v-model="selectedLanguage"

@@ -6,55 +6,44 @@
                     <v-layout column>
                         <v-flex
                             class="display-2  black--text text-xs-center my-5"
-                            >About us</v-flex
+                            >О нас</v-flex
                         >
                         <v-flex>
                             <div
                                 class="headline mt-3 black--text font-weight-bold"
                             >
-                                What is our motivation?
+                                Наша мотивация:
                             </div>
                             <p class="subheading mt-3">
-                                Due to language deficits, refugee children need
-                                help in coping with school material. Since the
-                                help offered by the schools is usually not
-                                sufficient, individual support in the form of
-                                tutoring tailored to the child is necessary. It
-                                is planned to involve refugee teachers from
-                                Ukraine in the project, who will tutor between
-                                five and ten refugee students in various
-                                subjects. There will be close cooperation with
-                                the German subject teachers, so that reference
-                                can be made to ongoing subject teaching at any
-                                time. In cooperation with the Forum der
-                                Kulturen/ or a school, the Ukrainian teachers
-                                who have fled are given information about the
-                                project in order to arouse their interest in
-                                voluntary work with students from Ukraine.
+                                Из-за трудностей с языком, многие дети из Украины
+                                нуждаются в помощи со школьной программой. Обычно неемецкие школы не
+                                могут предоставить существенной помощи детям на понятном для них языке, 
+                                в связи с чем дети быстро пропускают необходимый материал и отсатют от программы.
+                                Наш проект нацелен предоставить решение этой проблемы. Мы намерены предоставить
+                                рабочие места учителям из Украины, кто мог быть проходить школьный материал
+                                с детьми и параллельно учить необходимой терминологии. Помимо этого, 
+                                врослые тоже имеют возможность посещать курсы немецкого в нашей школе в то времмя, пока 
+                                детки сидят на скоих занятиях. Мы надеемся, что это поможет родителям в преодолении
+                                языкового барьера и  дети смогут 
+                                быстрее интегрироваться в общество и упростит процесс обучения в школе на немецком языке.
+                        
                             </p>
                         </v-flex>
                         <v-flex>
                             <div
                                 class="headline mt-3 black--text font-weight-bold"
                             >
-                                What do we offer?
+                                Наши предложения:
                             </div>
                             <p class="subheading mt-3">
-                                Tutoring in DAZ, mathematics, English and all
-                                other common school subjects is planned, and the
-                                books and teaching materials will be used here.
-                                In addition, we want to get dictionaries and
-                                vocabulary trainers for all tutoring subjects to
-                                support teachers and students. In addition to
-                                support in the classic subjects, language
-                                courses, creative and play activities for
-                                children are to be offered. Another important
-                                point of our project is the psychological
-                                support of volunteers. It is essential for
-                                children to keep contact with their age group,
-                                keep studying and developing their skills in
-                                order to give them back the feeling of a safe
-                                live and support.
+                                Курсы в матемитике, английском и немецком языках,
+                                рисование, шахматы и многое другое скоординированны нашей
+                                группой преподавателей. Все материалы и книги будут преоставлены на
+                                занятиях нашей школой. Все занятия проходят по субботам и их
+                                посещение полностью зависит то того, есть ли у вас на этой время 
+                                и желание. В наших группах нет никаких возрастных ограниченй, 
+                                мы рады всем участникам!
+                               
                             </p>
                         </v-flex>
                     </v-layout>

@@ -6,8 +6,8 @@
                     <v-layout row>
                         <v-flex
                             class="display-2  black--text text-xs-center my-5"
-                            ><span>Available</span>
-                            <span> free courses</span></v-flex
+                            ><span>Доступные</span>
+                            <span> Бесплатные курсы</span></v-flex
                         >
                     </v-layout>
                     <v-layout row wrap>
@@ -24,7 +24,7 @@
                                         <div class="width-50" color="red">
                                             <span
                                                 class="text-h5 curse-underline "
-                                                >Description:</span
+                                                >Описание:</span
                                             >
                                             <br />
                                             <div class=" pt-6">
@@ -34,7 +34,7 @@
                                         <div class="width-50 ml-12">
                                             <span
                                                 class="text-h5 curse-underline"
-                                                >Groups</span
+                                                >Группы</span
                                             >
                                             <br />
                                             <div
@@ -51,16 +51,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <v-btn
-                                        class="my-7 ml-3"
-                                        @click="scrollMeTo('registerForm')"
-                                        color="#c36f2d"
-                                        light
-                                        outlined
-                                        tile
-                                        depressed
-                                        >Register</v-btn
-                                    >
+                                 
                                 </v-expansion-panel-content>
                             </v-expansion-panel>
                         </v-expansion-panels>
@@ -79,31 +70,30 @@ export default {
         return {
             curses: [
                 {
-                    name: 'English',
+                    name: 'Английский',
                     desc:
-                        'English lessons are divided into two age groups - children (5-10 y.o.) and teenagers(11 - 16 y.o.). The level of the language depends on the group and varies from A1 to B2.',
+                        'Занятия английского языка поделены на 2 группы - младшую и среднюю группы. Уровень языка варьируется между начинающим и продвинутым.',
                     groups: [
-                        { group: 'Children', time: 'Saturday 10:00 - 10:45' },
-                        { group: 'Teenagers', time: 'Saturday 11:00 - 11:45' }
+                        { group: 'Младшая группа', time: 'Суббота 11:00 - 11:45' },
+                        { group: 'Средняя группа', time: 'Суббота 10:00 - 10:45' }
                     ]
                 },
                 {
-                    name: 'German',
+                    name: 'Немецкий',
                     desc:
-                        'German lessons are divided into three groups - for children, teenagers and theor parents. Level od the language is A1-A2. Learning material for adults has different topics, than material for children.',
+                        'Занятия немецким поделены на 3 группы - младшую, среднюю и группу родителей. Уроыень языка начинающий, темы занятий зависят от группы.',
                     groups: [
-                        { group: 'Children', time: 'Saturday 11:00 - 11:45' },
-                        { group: 'Teenagers', time: 'Saturday 10:00 - 10:45' },
-                        { group: 'Parents', time: 'Saturday 10:00 - 11:45' }
+                        { group: 'Младшая группа', time: 'Суббота 10:00 - 10:45' },
+                        { group: 'Средняя группа', time: 'Суббота 11:00 - 11:45' },
+                        { group: 'Родители', time: 'Суббота 10:00 - 11:45' }
                     ]
                 },
                 {
-                    name: 'Drawing',
+                    name: 'Рисование, Шахматы',
                     desc:
-                        'Art classes are focused on providing children an opportunity to enhance their creativity, improve imagination and let their parents have some break durin the coffe break ;)',
+                        'Занятия рисованием и шахматы проходят одномоментно, все желающие могут сами выбрать себе занятие по вкусу. Любой возраст приветсвуется!',
                     groups: [
-                        { group: 'Children', time: 'Saturday 12:00 - 11:45' },
-                        { group: 'Teenagers', time: 'Saturday 12:00 - 12:45' }
+                        { group: 'Для всех', time: 'Saturday 12:00 - 13:30' }
                     ]
                 }
             ]

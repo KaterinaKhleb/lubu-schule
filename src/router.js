@@ -20,8 +20,8 @@ const router = new Router({
         },
         {
             path: '/',
-            name: 'sommercamp',
-            component: Sommercamp
+            name: 'home',
+            component: Home
         }
     ]
 });
