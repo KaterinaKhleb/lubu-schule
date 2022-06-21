@@ -5,7 +5,7 @@
         </router-link>
         <v-spacer class="hidden-sm-and-down"></v-spacer>
 
-        <v-btn
+        <!-- <v-btn
                 depressed
                 dark
                 outlined
@@ -13,7 +13,7 @@
                 class="hidden-sm-and-down  mr-5 nav-menu"
                 to="/"
                 data-cy="menuBtn"
-            >Curses</v-btn>
+            >Школа</v-btn> -->
         <!-- <v-btn
             depressed
             dark
@@ -24,7 +24,7 @@
             data-cy="menuBtn"
             >Summer Camp</v-btn
         > -->
-        <v-col class="lang-selector" cols="1">
+        <!-- <v-col class="lang-selector" cols="1">
             <v-select
                 v-model="selectedLanguage"
                 :items="langs"
@@ -33,7 +33,7 @@
                 hide-details
                 @change="getContent(selectedLanguage)"
             ></v-select>
-        </v-col>
+        </v-col> -->
     </v-app-bar>
 </template>
 

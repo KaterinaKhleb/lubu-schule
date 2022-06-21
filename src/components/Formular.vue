@@ -10,7 +10,7 @@
             <div class="text-form mt-8">
                 Для регистрации на наши занятия достаточно написать нам в нашем 
                 <a href="https://t.me/+i8qzmPDTpLkxNGIy" download>Телеграмм канале</a>
-                или написать на нашу электронную почту info@forum-wbk.de..
+                или написать на нашу электронную почту info@forum-wbk.de.
             </div>
             <div class="text-form mt-8  ">Если у Вас есть вопросы, не стесняйтесь задать нам их по почте или в тедеграмме.</div>
             <div class="d-flex text-form mt-8 mb-8 flex-column">
