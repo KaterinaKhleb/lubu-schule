@@ -12,12 +12,12 @@
                 <a href="https://t.me/+i8qzmPDTpLkxNGIy" download>Телеграмм канале</a>
                 или написать на нашу электронную почту info@forum-wbk.de..
             </div>
-            <div class="text-form mt-8  ">{{ formSubtitle }}</div>
+            <div class="text-form mt-8  ">Если у Вас есть вопросы, не стесняйтесь задать нам их по почте или в тедеграмме.</div>
             <div class="d-flex text-form mt-8 mb-8 flex-column">
                 <div>Email: info@forum-wbk.de</div>
                 <div>
                     Telegramm:
-                    <a href="https://t.me/+i8qzmPDTpLkxNGIy">Our channel</a>
+                    <a href="https://t.me/+i8qzmPDTpLkxNGIy">Наш канал</a>
                 </div>
             </div>
         </v-container>
