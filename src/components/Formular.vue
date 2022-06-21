@@ -9,7 +9,7 @@
             <div class="formular-title">Регистрация</div>
             <div class="text-form mt-8">
                 Для регистрации на наши занятия достаточно написать нам в нашем 
-                <a href="https://t.me/+7pzjhBIQFWcwOTNi" download>Телеграмм канале</a>
+                <a href="https://t.me/+i8qzmPDTpLkxNGIy" download>Телеграмм канале</a>
                 или написать на нашу электронную почту info@forum-wbk.de..
             </div>
             <div class="text-form mt-8  ">{{ formSubtitle }}</div>
@@ -17,7 +17,7 @@
                 <div>Email: info@forum-wbk.de</div>
                 <div>
                     Telegramm:
-                    <a href="https://t.me/+7pzjhBIQFWcwOTNi">Our channel</a>
+                    <a href="https://t.me/+i8qzmPDTpLkxNGIy">Our channel</a>
                 </div>
             </div>
         </v-container>
