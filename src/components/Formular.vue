@@ -6,19 +6,21 @@
         grid-list-lg
     >
         <v-container class="width-50" grid-list-lg>
-            <div class="formular-title">Регистрация</div>
+            <div class="formular-title">{{registration}}</div>
             <div class="text-form mt-8">
-                Для регистрации на наши занятия достаточно написать нам в нашем 
-                <a href="https://t.me/+i8qzmPDTpLkxNGIy" download>Телеграмм канале</a>
-                или написать на нашу электронную почту info@forum-wbk.de.
+                {{regSchoolDesc}}
+                <a href="https://t.me/+i8qzmPDTpLkxNGIy" download>{{regSchoolDesc2}}</a>
+                {{regSchoolDesc3}}
             </div>
-            <div class="text-form mt-8  ">Если у Вас есть вопросы, не стесняйтесь задать нам их по почте или в тедеграмме.</div>
+            <div class="text-form mt-8  ">{{regSchoolDesc4}}</div>
             <div class="d-flex text-form mt-8 mb-8 flex-column">
                 <div>Email: info@forum-wbk.de</div>
                 <div>
                     Telegramm:
-                    <a href="https://t.me/+i8qzmPDTpLkxNGIy">Наш канал</a>
+                    <a href="https://t.me/+i8qzmPDTpLkxNGIy">{{ourChannel}}</a>
                 </div>
+                <div>{{address}}: Kornbergstraße 7-9, 70176 Stuttgart.</div>
+
             </div>
         </v-container>
         <img
@@ -63,11 +65,7 @@ export default {
     computed: {
         ...mapGetters([
             'registration',
-            'registrTextPart1',
-            'formLink',
-            'registrTextPart2',
-            'formSubtitle',
-            'success'
+            "regSchoolDesc", "regSchoolDesc2", "regSchoolDesc3", "regSchoolDesc4", "ourChannel", "address"
         ])
     },
 

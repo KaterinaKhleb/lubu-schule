@@ -1,111 +1,168 @@
 <template>
-    <v-container fluid id="curseSection" grid-list-lg>
+    <v-container
+        fluid
+        id="curseSection"
+        grid-list-lg
+    >
         <v-container grid-list-lg>
-            <v-row cols="12" sm="6" md="8">
-                <v-col cols="12" sm="12">
+            <v-row
+                cols="12"
+                sm="6"
+                md="8"
+            >
+                <v-col
+                    cols="12"
+                    sm="12"
+                >
                     <v-layout row>
-                        <v-flex
-                            class="display-2  black--text text-xs-center my-5"
-                            ><span>Доступные</span>
-                            <span> Бесплатные курсы</span></v-flex
-                        >
+                        <v-flex class="display-2  black--text text-xs-center my-5">
+                            <span> {{ coursesName }}</span>
+                        </v-flex>
                     </v-layout>
-                    <v-layout row wrap>
+                    <v-layout
+                        row
+                        wrap
+                    >
                         <v-expansion-panels popup>
-                            <v-expansion-panel
-                                v-for="(curse, i) in curses"
-                                :key="i"
-                            >
+                            <v-expansion-panel>
                                 <v-expansion-panel-header light>
-                                    {{ curse.name }}
+                                    {{ english }}
                                 </v-expansion-panel-header>
                                 <v-expansion-panel-content>
                                     <div class="d-flex mt-5">
-                                        <div class="width-50" color="red">
-                                            <span
-                                                class="text-h5 curse-underline "
-                                                >Описание:</span
-                                            >
+                                        <div
+                                            class="width-50"
+                                            color="red"
+                                        >
+                                            <span class="text-h5 curse-underline ">{{ desc }}:</span>
                                             <br />
                                             <div class=" pt-6">
-                                                {{ curse.desc }}
+                                                {{ engDesc }}
                                             </div>
-                                        </div>
-                                        <div class="width-50 ml-12">
-                                            <span
-                                                class="text-h5 curse-underline"
-                                                >Группы</span
-                                            >
-                                            <br />
-                                            <div
-                                                class="pt-6"
-                                                v-for="group in curse.groups"
-                                                :key="group.group"
-                                            >
-                                                <div>
-                                                    <h4>
-                                                        {{ group.group }}:
-                                                        {{ group.time }}
-                                                    </h4>
-                                                </div>
+                                    </div>
+                                    <div class="width-50 ml-12">
+                                        <span class="text-h5 curse-underline">{{ groups }}</span>
+                                        <br />
+                                        <div class="pt-6">
+                                            <div>
+                                                <h4>
+                                                    {{ youngGroup }}: {{ saturday }} 11:00 - 11:45
+                                                </h4>
+                                                <h4>
+                                                    {{ middleGroup }}: {{ saturday }} 10: 00 - 10:45
+                                                </h4>
                                             </div>
                                         </div>
                                     </div>
-                                 
+                                    </div>
+                                </v-expansion-panel-content>
+                            </v-expansion-panel>
+                            <v-expansion-panel>
+                                <v-expansion-panel-header light>
+                                    {{ german }}
+                                </v-expansion-panel-header>
+                                <v-expansion-panel-content>
+                                    <div class="d-flex mt-5">
+                                        <div
+                                            class="width-50"
+                                            color="red"
+                                        >
+                                            <span class="text-h5 curse-underline ">{{ desc }}:</span>
+                                            <br />
+                                            <div class=" pt-6">
+                                                {{ deutschDesc }}
+                                            </div>
+                                    </div>
+                                    <div class="width-50 ml-12">
+                                        <span class="text-h5 curse-underline">{{ groups }}</span>
+                                        <br />
+                                        <div class="pt-6">
+                                            <div>
+                                                <h4>
+                                                    {{ youngGroup }}: {{ saturday }} 10:00 - 10:45
+                                                </h4>
+                                                <h4>
+                                                    {{ middleGroup }}: {{ saturday }} 11:00 - 11:45
+                                                </h4>
+                                                <h4>
+                                                    {{ parents }}: {{ saturday }} 10:00 - 11:45
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
+                                </v-expansion-panel-content>
+                            </v-expansion-panel>
+                            <v-expansion-panel>
+                                <v-expansion-panel-header light>
+                                    {{ additionalCourses }}
+                                </v-expansion-panel-header>
+                                <v-expansion-panel-content>
+                                    <div class="d-flex mt-5">
+                                        <div
+                                            class="width-50"
+                                            color="red"
+                                        >
+                                            <span class="text-h5 curse-underline ">{{ desc }}:</span>
+                                            <br />
+                                            <div class=" pt-6">
+                                                {{ extraCoursesDesc }}
+                                            </div>
+                                    </div>
+                                    <div class="width-50 ml-12">
+                                        <span class="text-h5 curse-underline">{{ groups }}</span>
+                                        <br />
+                                        <div class="pt-6">
+                                            <div>
+                                                <h4>
+                                                    {{ forAll }}: {{ saturday }} 12:00 - 13:30
+                                                </h4>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    </div>
                                 </v-expansion-panel-content>
                             </v-expansion-panel>
                         </v-expansion-panels>
-                    </v-layout>
-                </v-col>
-            </v-row>
+                        </v-layout>
+                        </v-col>
+                        </v-row>
         </v-container>
         <!-- <img class="dots-curses" :src="require(`../assets/dots_dark.svg`)" alt=""> -->
-    </v-container>
+        </v-container>
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
     name: 'CursesPlan',
-    data() {
-        return {
-            curses: [
-                {
-                    name: 'Английский',
-                    desc:
-                        'Занятия английского языка поделены на 2 группы - младшую и среднюю группы. Уровень языка варьируется между начинающим и продвинутым.',
-                    groups: [
-                        { group: 'Младшая группа', time: 'Суббота 11:00 - 11:45' },
-                        { group: 'Средняя группа', time: 'Суббота 10:00 - 10:45' }
-                    ]
-                },
-                {
-                    name: 'Немецкий',
-                    desc:
-                        'Занятия немецким поделены на 3 группы - младшую, среднюю и группу родителей. Уроыень языка начинающий, темы занятий зависят от группы.',
-                    groups: [
-                        { group: 'Младшая группа', time: 'Суббота 10:00 - 10:45' },
-                        { group: 'Средняя группа', time: 'Суббота 11:00 - 11:45' },
-                        { group: 'Родители', time: 'Суббота 10:00 - 11:45' }
-                    ]
-                },
-                {
-                    name: 'Рисование, Шахматы',
-                    desc:
-                        'Занятия рисованием и шахматы проходят одномоментно, все желающие могут сами выбрать себе занятие по вкусу. Любой возраст приветсвуется!',
-                    groups: [
-                        { group: 'Для всех', time: 'Saturday 12:00 - 13:30' }
-                    ]
-                }
-            ]
-        };
+    computed: {
+        ...mapGetters([
+            'coursesName',
+            'english',
+            'german',
+            'additionalCourses',
+            'desc',
+            'groups',
+            'engDesc',
+            'youngGroup',
+            'middleGroup',
+            'parents',
+            'saturday',
+            'deutschDesc',
+            'extraCoursesDesc',
+            'forAll',
+        ]),
     },
+
     methods: {
         scrollMeTo(refName) {
             const element = document.getElementById(refName);
             const top = element.offsetTop;
             window.scrollTo(0, top);
-        }
-    }
+        },
+    },
 };
 </script>
 

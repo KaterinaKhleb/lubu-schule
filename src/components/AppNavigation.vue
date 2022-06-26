@@ -24,7 +24,7 @@
             data-cy="menuBtn"
             >Summer Camp</v-btn
         > -->
-        <!-- <v-col class="lang-selector" cols="1">
+        <v-col class="lang-selector" cols="1">
             <v-select
                 v-model="selectedLanguage"
                 :items="langs"
@@ -33,7 +33,7 @@
                 hide-details
                 @change="getContent(selectedLanguage)"
             ></v-select>
-        </v-col> -->
+        </v-col>
     </v-app-bar>
 </template>
 
@@ -45,7 +45,7 @@ export default {
         return {
             drawer: false,
             selectedLanguage: 'de',
-            langs: ['en', 'ukr', 'ru', 'de']
+            langs: [ 'ru', 'de']
         };
     },
     methods: {
