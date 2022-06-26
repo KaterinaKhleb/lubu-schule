@@ -128,14 +128,16 @@ export default {
 .vector {
     position: absolute;
     left: 0px;
-    bottom: 0px;
+    height: 300px;
+    width: auto;
+    bottom: 100px;
 }
 .man-standing {
     position: absolute;
-    height: 200px;
+    height: 300px;
     width: auto;
     left: 100px;
-    bottom: 30px;
+    bottom: 130px;
 }
 .dots {
     position: relative;

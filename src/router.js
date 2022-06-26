@@ -1,6 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
+import School from './views/School.vue';
 import Sommercamp from './views/Sommercamp.vue';
 
 Vue.use(Router);
@@ -9,9 +9,9 @@ const router = new Router({
     mode: 'history',
     base: process.env.BASE_URL,
     routes: [{
-            path: '/home',
-            name: 'home',
-            component: Home
+            path: '/school',
+            name: 'school',
+            component: School
         },
         {
             path: '/sommercamp',
@@ -20,8 +20,8 @@ const router = new Router({
         },
         {
             path: '/',
-            name: 'home',
-            component: Home
+            name: 'school',
+            component: School
         }
     ]
 });
