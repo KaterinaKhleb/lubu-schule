@@ -2,7 +2,7 @@
     <v-container fluid class="school-holder">
         <v-container grid-list-lg>
             <v-row cols="12" sm="6" md="8">
-                <v-col cols="12" sm="8">
+                <v-col cols="12" sm="12"  md="8">
                     <v-layout column>
                         <v-flex
                             class="display-2  black--text text-xs-center my-5"
@@ -32,7 +32,7 @@
                         </v-flex>
                     </v-layout>
                 </v-col>
-                <v-col cols="12" sm="4">
+                <v-col class="img-holder" cols="12" sm="4">
                     <img
                         :src="require(`../assets/Illustration_girl.svg`)"
                         alt=""
@@ -64,5 +64,43 @@ export default {
 <style scoped>
 .school-holder {
     background-color: #f6f7f8;
+}
+img{
+    width: 400px;
+    height: auto;
+    margin-top: 300px
+}
+
+/* Tablet horiz to vertical
+===============================*/
+@media (min-width: 1024px) and (max-width: 1280px) {
+      .img-holder{
+        display: none;
+    }
+}
+
+/* Horiz Tablet to Desktop
+===============================*/
+@media (min-width: 768px) and (max-width: 1023px) {
+    .img-holder{
+        display: none;
+    }
+
+}
+
+/* Mobile to Tablet Portrait
+===============================*/
+@media (min-width: 480px) and (max-width: 767px) {
+    .img-holder{
+        display: none;
+    }
+
+}
+
+@media (max-width: 480px) {
+  .img-holder{
+        display: none;
+    }
+
 }
 </style>

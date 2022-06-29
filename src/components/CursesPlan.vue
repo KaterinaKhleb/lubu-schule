@@ -195,4 +195,31 @@ export default {
     height: 120px;
     width: auto;
 }
+@media (min-width: 1024px) and (max-width: 1280px) {
+}
+
+/* Horiz Tablet to Desktop
+===============================*/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+}
+
+/* Mobile to Tablet Portrait
+===============================*/
+@media (min-width: 480px) and (max-width: 767px) {
+
+}
+
+@media (max-width: 480px) {
+.curse-underline::before {
+    content: '';
+    position: absolute;
+    bottom: 16px;
+    width: 80px;
+    height: 14px;
+    transform: skew(-12deg) translateY(90%);
+    background: rgba(238, 111, 87, 0.5);
+    /* z-index: -1; */
+}
+}
 </style>

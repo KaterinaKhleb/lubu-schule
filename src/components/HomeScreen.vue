@@ -36,4 +36,44 @@ export default {
     width: auto;
     height: 100vh;
 }
+
+/* Tablet horiz to vertical
+===============================*/
+@media (min-width: 1024px) and (max-width: 1280px) {
+}
+
+/* Horiz Tablet to Desktop
+===============================*/
+@media (min-width: 768px) and (max-width: 1023px) {
+
+
+}
+
+/* Mobile to Tablet Portrait
+===============================*/
+@media (min-width: 480px) and (max-width: 767px) {
+ .home-hero {
+    background: url('../assets/kit-logo.png');
+      background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+    width: auto;
+    height: 100vh;
+    background-size: contain
+}
+
+}
+
+@media (max-width: 480px) {
+.home-hero {
+    background: url('../assets/kit-logo.png');
+      background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+    width: auto;
+    height: 100vh;
+    background-size: contain
+}
+
+}
 </style>

@@ -117,7 +117,7 @@ a {
     .lang-selector {
         flex: auto !important;
         max-width: unset !important ;
-        width: 30%;
+        max-width: 40% !important;
     }
     .nav {
         display: flex;

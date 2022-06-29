@@ -57,7 +57,10 @@ export default {
             ],
             slides: [
                 {url:  require('@/assets/trip1.jpg'), desc: "Tripsdrill 19.06.2022"},
-                {url:  require('@/assets/trip1.jpg'), desc: "Tripsdrill 19.06.2022"},
+                {url:  require('@/assets/trip2.jpg'), desc: "Tripsdrill 19.06.2022"},
+                // {url:  require('@/assets/trip3.jpg'), desc: "Tripsdrill 19.06.2022"},
+                // {url:  require('@/assets/trip4.jpg'), desc: "Tripsdrill 19.06.2022"},
+
             ],
         };
     },
